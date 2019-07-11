@@ -1,6 +1,5 @@
-﻿using System;
+﻿using Etude.Views;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace Etude
 {
@@ -10,7 +9,7 @@ namespace Etude
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
