@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:Etude.ViewModels"
+             xmlns:controls="clr-namespace:Etude.Controls"
              mc:Ignorable="d"
              x:Class="Etude.Views.Example01"
              Title="Custom Control Behaviors">
@@ -11,8 +12,8 @@
         <vm:Example01ViewModel />
     </ContentPage.BindingContext>
     <StackLayout>
-        <Label Text="Welcome to Xamarin.Forms!"
-            VerticalOptions="CenterAndExpand" 
-            HorizontalOptions="CenterAndExpand" />
+        <controls:ValidationEntry Caption="Name:"
+                                  Placeholder="Enter you name"
+                                  Value="{Binding Fullname, Mode=TwoWay}"/>
     </StackLayout>
 </ContentPage>

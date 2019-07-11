@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Etude.Controls.ValidationEntry"
+             x:Name="ValidationControl">
+    <StackLayout>
+        <Label x:Name="CaptionLabel" 
+               Text="{Binding Source={x:Reference ValidationControl}, Path=Caption}">
+        </Label>
+        <Entry x:Name="DataEntry"
+               Text="{Binding Source={x:Reference ValidationControl}, Path=Value, Mode=TwoWay}"
+               Placeholder="{Binding Source={x:Reference ValidationControl}, Path=Placeholder}">
+        </Entry>
+    </StackLayout>
+</ContentView>
