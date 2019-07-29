@@ -15,5 +15,9 @@
         <controls:ValidationEntry Caption="Name:"
                                   Placeholder="Enter you name"
                                   Value="{Binding Fullname, Mode=TwoWay}"/>
+        <controls:ValidationEntry Caption="Unit Price:"
+                                  Placeholder="Price of unit"
+                                  AttachDecimalValidationBehavior="True"
+                                  Value="{Binding UnitPrice, Mode=TwoWay}"/>
     </StackLayout>
 </ContentPage>

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Etude.ViewModels
+﻿namespace Etude.ViewModels
 {
     public class Example01ViewModel : BaseViewModel
     {
@@ -12,8 +8,15 @@ namespace Etude.ViewModels
             set { SetProperty(ref _fullname, value); }
         }
 
+        public string UnitPrice
+        {
+            get { return _unitPrice; }
+            set { SetProperty(ref _unitPrice, value); }
+        }
+
         #region Private Variables
         private string _fullname = string.Empty;
+        private string _unitPrice = string.Empty;
         #endregion
 
         public Example01ViewModel()

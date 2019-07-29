@@ -8,6 +8,12 @@ namespace Etude.Controls
         public static readonly BindableProperty CaptionProperty = BindableProperty.Create(
             nameof(Caption), typeof(string), typeof(ValidationEntry), default(string));
 
+        public string Caption
+        {
+            get => (string)GetValue(CaptionProperty);
+            set => SetValue(CaptionProperty, value);
+        }
+
         // Entry
         public static readonly BindableProperty ValueProperty = BindableProperty.Create(
             nameof(Value), typeof(string), typeof(ValidationEntry), default(string));
@@ -27,10 +33,14 @@ namespace Etude.Controls
             set => SetValue(PlaceholderProperty, value);
         }
 
-        public string Caption
+        public static readonly BindableProperty AttachDecimalValidationBehaviorProperty =
+            BindableProperty.Create(nameof(AttachDecimalValidationBehavior), typeof(bool), typeof(ValidationEntry),
+                false);
+
+        public bool AttachDecimalValidationBehavior
         {
-            get => (string)GetValue(CaptionProperty);
-            set => SetValue(CaptionProperty, value);
+            get => (bool)GetValue(AttachDecimalValidationBehaviorProperty);
+            set => SetValue(AttachDecimalValidationBehaviorProperty, value);
         }
 
         public ValidationEntry()
