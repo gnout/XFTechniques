@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace Etude.ViewModels
 {
-    public class MainPageViewModel : BaseViewModel
+    public class Set04ViewModel : BaseViewModel
     {
         public List<Example> Model
         {
@@ -25,7 +25,7 @@ namespace Etude.ViewModels
         private Example _selectedItem;
         #endregion
 
-        public MainPageViewModel()
+        public Set04ViewModel()
         {
             LoadDataCommand = new Command(async () => await InitAsync());
         }
@@ -34,27 +34,34 @@ namespace Etude.ViewModels
         {
             return Task.Run(() =>
             {
+                var nav = App.Current.MainPage.Navigation;
+
                 Model = new List<Example>
                 {
                     new Example
                     {
-                        Name = "Custom Controls",
-                        Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set01()); }
+                        Name = "Fade In",
+                        Act = async () => { await nav.PushAsync(new Example05()); }
                     },
                     new Example
                     {
-                        Name = "Various NuGet Packages",
-                        Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set02()); }
+                        Name = "From Different Directions",
+                        Act = async () => { await nav.PushAsync(new Example06()); }
                     },
                     new Example
                     {
-                        Name = "List Views",
-                        Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set03()); }
+                        Name = "Turn the Page",
+                        Act = async () => { await nav.PushAsync(new Example07()); }
                     },
                     new Example
                     {
-                        Name = "Page Transition Animations",
-                        Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set04()); }
+                        Name = "Coming from above",
+                        Act = async () => { await nav.PushAsync(new Example08()); }
+                    },
+                    new Example
+                    {
+                        Name = "Scale up and dissappear",
+                        Act = async () => { await nav.PushAsync(new Example09()); }
                     }
                 };
             });

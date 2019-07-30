@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Etude.Views.Example09"
+             Title="Scale up and dissappear">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="FacebookColor">#3b5997</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Contact form -->
+            <StackLayout Grid.Row="0"
+                         Spacing="0"
+                         Margin="15,20,15,0">
+                <!-- Email -->
+                <Label x:Name="Label1" 
+                       Text="Email address:"/>
+                <Entry x:Name="Entry1" 
+                       Text="{Binding Model.Email}"
+                       Keyboard="Email"/>
+
+                <!-- Comments -->
+                <Label x:Name="Label2" 
+                       Text="Comments: "/>
+                <Editor x:Name="Entry2" 
+                        Text="{Binding Model.Comments}" 
+                        HeightRequest="80" />
+
+                <Button x:Name="buttonSubmit" 
+                        Text="Submit" />
+            </StackLayout>
+
+            <Button x:Name="buttonFacebook"
+                    Grid.Row="1" 
+                    Margin="20,0,20,0"
+                    VerticalOptions="Center"
+                    TextColor="White"
+                    BackgroundColor="{x:StaticResource FacebookColor}"
+                    Text="Sample"
+                    Clicked="ButtonFacebook_Clicked"/>
+
+            <!-- Created by -->
+            <StackLayout x:Name="CreatedBy"
+                         Grid.Row="2"
+                         Margin="10"
+                         Spacing="0">
+                <Label Text="Created by"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"/>
+                <Label Text="READOnly creations - Copyright @ 2018"
+                       HorizontalTextAlignment="Center"/>
+                <Label Text="info@readonly.eu"
+                       HorizontalTextAlignment="Center"
+                       TextColor="Blue">
+                </Label>
+            </StackLayout>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>
