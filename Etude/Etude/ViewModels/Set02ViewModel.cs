@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace Etude.ViewModels
 {
-    public class MainPageViewModel : BaseViewModel
+    public class Set02ViewModel : BaseViewModel
     {
         public List<Example> Model
         {
@@ -25,7 +25,7 @@ namespace Etude.ViewModels
         private Example _selectedItem;
         #endregion
 
-        public MainPageViewModel()
+        public Set02ViewModel()
         {
             LoadDataCommand = new Command(async () => await InitAsync());
         }
@@ -34,17 +34,14 @@ namespace Etude.ViewModels
         {
             return Task.Run(() =>
             {
+                var nav = App.Current.MainPage.Navigation;
+
                 Model = new List<Example>
                 {
                     new Example
                     {
-                        Name = "Custom Controls",
-                        Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set01()); }
-                    },
-                    new Example
-                    {
-                        Name = "Various NuGet Packages",
-                        Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set02()); }
+                        Name = "ACR User Dialogs",
+                        Act = async () => { await nav.PushAsync(new Example02()); }
                     }
                 };
             });
