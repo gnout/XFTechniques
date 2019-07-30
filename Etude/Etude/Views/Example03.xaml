@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Etude.ViewModels"
+             xmlns:converters="clr-namespace:Etude.Converters"
+             mc:Ignorable="d"
+             x:Class="Etude.Views.Example03"
+             Title="Expand / Collapse Tapped Cell">
+    <ContentPage.BindingContext>
+        <vm:Example03ViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:EqualsParameterContextConverter x:Key="CnvInvert"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ListView x:Name="listView"
+              ItemsSource="{Binding Model}"
+              SelectedItem="{Binding SelectedItem}"
+              HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout x:Name="cell">
+                        <Label Text="{Binding Name}"/>
+                        <Label Text="{Binding Musicians[0]}"
+                               IsVisible="{Binding Source={x:Reference listView}, Path=SelectedItem, 
+                                                   Converter={StaticResource CnvInvert}, 
+                                                   ConverterParameter={x:Reference cell}}">
+                        </Label>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

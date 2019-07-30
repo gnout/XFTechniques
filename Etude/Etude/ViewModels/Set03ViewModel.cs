@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace Etude.ViewModels
 {
-    public class MainPageViewModel : BaseViewModel
+    public class Set03ViewModel : BaseViewModel
     {
         public List<Example> Model
         {
@@ -25,7 +25,7 @@ namespace Etude.ViewModels
         private Example _selectedItem;
         #endregion
 
-        public MainPageViewModel()
+        public Set03ViewModel()
         {
             LoadDataCommand = new Command(async () => await InitAsync());
         }
@@ -34,23 +34,20 @@ namespace Etude.ViewModels
         {
             return Task.Run(() =>
             {
+                var nav = App.Current.MainPage.Navigation;
+
                 Model = new List<Example>
                 {
                     new Example
                     {
-                        Name = "Custom Controls",
-                        Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set01()); }
+                        Name = "Expand / Collapse Tapped Cell",
+                        Act = async () => { await nav.PushAsync(new Example03()); }
                     },
                     new Example
                     {
-                        Name = "Various NuGet Packages",
-                        Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set02()); }
-                    },
-                    new Example
-                    {
-                        Name = "List Views",
-                        Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set03()); }
-                    },
+                        Name = "Expand / Collapse Grouped List",
+                        Act = async () => { await nav.PushAsync(new Example04()); }
+                    }
                 };
             });
         }

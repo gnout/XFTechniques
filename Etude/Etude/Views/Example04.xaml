@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Etude.ViewModels"
+             xmlns:behaviors="clr-namespace:Etude.Behaviors"
+             mc:Ignorable="d"
+             x:Class="Etude.Views.Example04"
+             x:Name="FoodListPage"
+             Title="Expand / Collapse Grouped List">
+    <ContentPage.BindingContext>
+        <vm:Example04ViewModel/>
+    </ContentPage.BindingContext>
+    <ListView x:Name="lviewFoodList"
+              ItemsSource="{Binding Model}"
+              GroupDisplayBinding="{Binding Title}"
+              HasUnevenRows="True"
+              GroupShortNameBinding="{Binding Title}"
+              IsGroupingEnabled="true">
+        <ListView.Behaviors>
+            <behaviors:ListViewItemTappedBehavior/>
+        </ListView.Behaviors>
+        <ListView.GroupHeaderTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="15,0,0,0" BackgroundColor="#E2F5F9">
+                        <Label Text="{Binding Title}"
+                               VerticalOptions="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <Button Image="{Binding StateIcon}"
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                BorderWidth="0"
+                                VerticalOptions="Center"
+                                HorizontalOptions="End"
+                                Command="{Binding Source={x:Reference FoodListPage}, Path=Content.BindingContext.ExpandCollapseCommand}"
+                                CommandParameter="{Binding .}"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.GroupHeaderTemplate>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Name}" Detail="{Binding Description}"/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
