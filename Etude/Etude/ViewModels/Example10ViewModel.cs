@@ -21,7 +21,7 @@ namespace Etude.ViewModels
         #endregion
 
         #region Services
-        private readonly FoodService _foodService = new FoodService();
+        private readonly DataService _dataService = new DataService();
         #endregion
 
         #region Delegate Commands
@@ -38,7 +38,7 @@ namespace Etude.ViewModels
         {
             return Task.Run(() =>
             {
-                Model = _foodService.GetFoods();
+                Model = _dataService.GetFoods();
             });
         }
 

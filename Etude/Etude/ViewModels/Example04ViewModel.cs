@@ -1,4 +1,5 @@
 ﻿using Etude.Models;
+using Etude.Services;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Xamarin.Essentials;
@@ -16,6 +17,10 @@ namespace Etude.ViewModels
 
         #region Backing Properties
         private ObservableCollection<FoodGroup> _model;
+        #endregion
+
+        #region Services
+        private readonly DataService _dataService = new DataService();
         #endregion
 
         #region Delegate Commands
@@ -50,35 +55,7 @@ namespace Etude.ViewModels
 
         private void Init()
         {
-            _foodGroups = new ObservableCollection<FoodGroup>
-            {
-                new FoodGroup("Carbohydrates")
-                {
-                    new Food { Name = "pasta", Description = "Carb Snakes" },
-                    new Food { Name = "potato", Description = "The King of all Carbs" },
-                    new Food { Name = "bread", Description = "Soft & Gentle" },
-                    new Food { Name = "rice", Description = "Tiny grains of goodness" },
-                },
-                new FoodGroup("Fruits")
-                {
-                    new Food { Name = "apple", Description = "Keep the Doctor away" },
-                    new Food { Name = "banana", Description = "This fruit is appealing" },
-                    new Food { Name = "pear", Description = "Pear with me" },
-                },
-                new FoodGroup("Vegetables")
-                {
-                    new Food { Name = "carrot", Description = "Sounds like parrot" },
-                    new Food { Name = "green bean", Description = "The less popular cousin of the baked bean" },
-                    new Food { Name = "broccoli", Description = "Tiny food trees" },
-                    new Food { Name = "peas", Description = "Peas sir, can I have some more?" },
-                },
-                new FoodGroup("Dairy")
-                {
-                    new Food { Name = "Milk", Description = "Milk" },
-                    new Food { Name = "Cheese", Description = "Cheese + Potato" },
-                    new Food { Name = "Ice Cream", Description = "Because I couldn't find an icon for yoghurt" }
-                }
-            };
+            _foodGroups = _dataService.GetFoodGroups();
         }
 
         private void UpdateListContent()
