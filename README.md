@@ -34,3 +34,13 @@ The example uses MVVM. There is also an alternative that I didn't follow which i
 
 * It seems that the initialization and the update of the `ObservableCollection` need to be inside a `MainThread.BeginInvokeOnMainThread(() => { });`. I noticed that if it's not then an exception occures when the app is running on a physical device. It doesn't have the same behavior when it is running on a emulator.
 * The grouped list has a different behavior from the Android and the iOS. On an iOS device, when a group is expanded then the items that belongs to that group behaves as an independant list as if they don't belong in the entire list. When scrolling up they go below the group heafer instead of pushing the entire list up. There is one other issue with the iOS related to previous. The group header has a default color of gray. With a custom renderer this can be changed to be transparent. The side effect is that the element of that particular will be shown underneath the group header as they scroll up.  On an Android device the behavior is as expected.
+
+
+
+## Assorted (Set 05)
+
+### Event To Command Behavior (Example 10)
+
+https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/behaviors/reusable/event-to-command-behavior
+https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/
+https://github.com/xamarin/xamarin-forms-samples/tree/master/Behaviors/EventToCommandBehavior
