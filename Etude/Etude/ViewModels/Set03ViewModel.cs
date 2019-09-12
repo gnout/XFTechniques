@@ -47,6 +47,11 @@ namespace Etude.ViewModels
                     {
                         Name = "Expand / Collapse Grouped List",
                         Act = async () => { await nav.PushAsync(new Example04()); }
+                    },
+                    new Example
+                    {
+                        Name = "Simple Embeded Data",
+                        Act = async () => { await nav.PushAsync(new Example11()); }
                     }
                 };
             });
