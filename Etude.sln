@@ -7,7 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etude.Android", "Etude\Etud
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etude.iOS", "Etude\Etude.iOS\Etude.iOS.csproj", "{E363B1AC-D494-4ECC-A336-B9884CD79A03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etude", "Etude\Etude\Etude.csproj", "{3CABD8F3-14D3-49F8-8ED1-C980A3E9B7E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Etude", "Etude\Etude\Etude.csproj", "{3CABD8F3-14D3-49F8-8ED1-C980A3E9B7E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E7C198AC-B9D4-4D7A-BBEB-DBB3BDAC020D}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,6 +1,10 @@
 ﻿using Etude.Models;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace Etude.Services
 {
@@ -122,6 +126,25 @@ namespace Etude.Services
                     }
                 }
             };
+        }
+
+        public async Task<List<Employee>> GetApiDataAsync()
+        {
+            var result = new List<Employee>();
+            string url = "http://dummy.restapiexample.com/api/v1/employees";
+
+            using (var client = new HttpClient())
+            {
+                var response = await client.GetAsync(new Uri(url));
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    result = JsonConvert.DeserializeObject<List<Employee>>(content);
+                }
+            }
+
+            return result;
         }
     }
 }

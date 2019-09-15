@@ -7,6 +7,7 @@ Techniques for Xamarin.Forms
 ## NuGet Packages
 
 * [Acr.UserDialogs 7.0.4](https://github.com/aritchie/userdialogs) - All Projects
+* [Newtonsoft.Json 12.0.2](https://www.newtonsoft.com/json) - All Projects
 
 ## Custom Controls (Set 01)
 
@@ -35,7 +36,27 @@ The example uses MVVM. There is also an alternative that I didn't follow which i
 * It seems that the initialization and the update of the `ObservableCollection` need to be inside a `MainThread.BeginInvokeOnMainThread(() => { });`. I noticed that if it's not then an exception occures when the app is running on a physical device. It doesn't have the same behavior when it is running on a emulator.
 * The grouped list has a different behavior from the Android and the iOS. On an iOS device, when a group is expanded then the items that belongs to that group behaves as an independant list as if they don't belong in the entire list. When scrolling up they go below the group heafer instead of pushing the entire list up. There is one other issue with the iOS related to previous. The group header has a default color of gray. With a custom renderer this can be changed to be transparent. The side effect is that the element of that particular will be shown underneath the group header as they scroll up.  On an Android device the behavior is as expected.
 
+### Simple Embedded Data (Example 11)
 
+Simple `ListView` with the data defined in XAML
+
+### Simple ListView API Data (Example 12)
+
+This is a very simple, basic, ListView with data from an API call.  
+For the API calls to work there is a Network security configuration (Starting with Android 9 (API level 28), cleartext support is disabled by default)  
+In `AndroidManifest.xml` the following entries needs to be added
+
+```xml
+  <uses-permission android:name="android.permission.INTERNET" />
+  <application android:label="Etude.Android"
+               android:usesCleartextTraffic="true">
+  </application>
+```
+
+#### List of Public API's
+
+* [GitHub Page](https://github.com/public-apis/public-apis)
+* [Any API](https://any-api.com/)
 
 ## Assorted (Set 05)
 
