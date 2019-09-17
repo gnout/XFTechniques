@@ -42,6 +42,11 @@ namespace Etude.ViewModels
                     {
                         Name = "Event to Command Behaviors",
                         Act = async () => { await nav.PushAsync(new Example10()); }
+                    },
+                    new Example
+                    {
+                        Name = "Font Awesome",
+                        Act = async () => { await nav.PushAsync(new Example13()); }
                     }
                 };
             });
