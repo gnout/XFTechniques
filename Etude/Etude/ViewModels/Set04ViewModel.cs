@@ -62,6 +62,11 @@ namespace Etude.ViewModels
                     {
                         Name = "Scale up and dissappear",
                         Act = async () => { await nav.PushAsync(new Example09()); }
+                    },
+                    new Example
+                    {
+                        Name = "Animate Dialog Appearance",
+                        Act = async () => { await nav.PushAsync(new Example15()); }
                     }
                 };
             });
