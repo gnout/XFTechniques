@@ -58,10 +58,18 @@ In `AndroidManifest.xml` the following entries needs to be added
 * [GitHub Page](https://github.com/public-apis/public-apis)
 * [Any API](https://any-api.com/)
 
+### ListView with Buttons (Example 14)
+
+The example shows how to have usable buttons in a ListView item template connected to MVVM commands.  
+The problem is that each ListView item is __NOT__ bound to the `BindingContext` of the page which is `ViewModel` where the `Command` exists, but instead is bound to the items of the `List`.
+This example shows how to bound the `buttons` (`images` in this case) to the `BindingContext` of the page and call the commands defined in the MVVM and pass the current item as a parameter.
+
 ## Assorted (Set 05)
 
 ### Event To Command Behavior (Example 10)
 
-https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/behaviors/reusable/event-to-command-behavior
-https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/
-https://github.com/xamarin/xamarin-forms-samples/tree/master/Behaviors/EventToCommandBehavior
+A way to introduce events as commands in MVVM. The theory is in following [site](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/behaviors/reusable/event-to-command-behavior)
+
+### Font Awesome (Example 12)
+
+A tabbed page with icons from font awesome. The font needs to be installe din both platforms

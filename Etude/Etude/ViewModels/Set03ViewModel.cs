@@ -57,6 +57,11 @@ namespace Etude.ViewModels
                     {
                         Name = "Simple ListView API Data",
                         Act = async () => { await nav.PushAsync(new Example12()); }
+                    },
+                    new Example
+                    {
+                        Name = "ListView with button",
+                        Act = async () => { await nav.PushAsync(new Example14()); }
                     }
                 };
             });

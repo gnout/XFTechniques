@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Etude.ViewModels"
+             xmlns:behaviors="clr-namespace:Etude.Behaviors"
+             mc:Ignorable="d"
+             x:Class="Etude.Views.Example14"
+             x:Name="Example14Page"
+             Title="ListView with Buttons">
+    <ContentPage.BindingContext>
+        <vm:Example14ViewModel/>
+    </ContentPage.BindingContext>
+    <ListView x:Name="listView"
+              ItemsSource="{Binding Model}"
+              HasUnevenRows="True">
+        <ListView.Behaviors>
+            <behaviors:ListViewItemTappedBehavior/>
+        </ListView.Behaviors>
+        <ListView.Header>
+            <StackLayout Spacing="0"
+                         Padding="12,0,12,0">
+                <Label FontSize="24"
+                       TextColor="#0277D8"
+                       Text="ListView Header"/>
+                <Label FontSize="Large"
+                       TextColor="#292929"
+                       Text="Sub Header"/>
+            </StackLayout>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Frame HasShadow="True"
+                           CornerRadius="10"
+                           Margin="12,10,12,10">
+                        <Grid RowSpacing="0"
+                              ColumnSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40*"/>
+                                <ColumnDefinition Width="60*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Row="0" Grid.Column="0"
+                                   Source="Pencil"
+                                   WidthRequest="26"
+                                   HeightRequest="26"
+                                   HorizontalOptions="Start"
+                                   VerticalOptions="Center">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={x:Reference Example14Page}, Path=BindingContext.EditItemCommand}" 
+                                                          CommandParameter="{Binding .}"
+                                                          NumberOfTapsRequired="1" />
+                                </Image.GestureRecognizers>
+                            </Image>
+
+                            <Image Grid.Row="0" Grid.Column="1"
+                                   Source="Bin"
+                                   WidthRequest="26"
+                                   HeightRequest="26"
+                                   HorizontalOptions="End"
+                                   VerticalOptions="Center">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={x:Reference Example14Page}, Path=BindingContext.DeleteItemCommand}" 
+                                                          CommandParameter="{Binding .}"
+                                                          NumberOfTapsRequired="1" />
+                                </Image.GestureRecognizers>
+                            </Image>
+
+                            <!-- Band Name -->
+                            <Label Grid.Row="1" Grid.Column="0"
+                                   Grid.ColumnSpan="2"
+                                   Margin="0,2,0,0"
+                                   TextColor="#292929"
+                                   FontSize="24"
+                                   LineBreakMode="TailTruncation"
+                                   Text="{Binding Name}"/>
+
+                            <!-- Band Member 1 -->
+                            <Label Grid.Row="2" Grid.Column="0"
+                                   Margin="0,5,0,0"
+                                   Text="Band Member"/>
+                            <Label Grid.Row="2" Grid.Column="1"
+                                   Margin="0,5,0,0"
+                                   HorizontalTextAlignment="End"
+                                   LineBreakMode="TailTruncation"
+                                   Text="{Binding Musicians[0]}"/>
+
+                            <!-- Band Member 2 -->
+                            <Label Grid.Row="3" Grid.Column="0"
+                                   Margin="0,5,0,0"
+                                   Text="Band Member"/>
+                            <Label Grid.Row="3" Grid.Column="1"
+                                   Margin="0,5,0,0"
+                                   HorizontalTextAlignment="End"
+                                   LineBreakMode="TailTruncation"
+                                   Text="{Binding Musicians[1]}"/>
+
+                            <!-- Band Member 3 -->
+                            <Label Grid.Row="4" Grid.Column="0"
+                                   Margin="0,5,0,0"
+                                   Text="Band Member"/>
+                            <Label Grid.Row="4" Grid.Column="1"
+                                   Margin="0,5,0,0"
+                                   HorizontalTextAlignment="End"
+                                   LineBreakMode="TailTruncation"
+                                   Text="{Binding Musicians[2]}"/>
+                        </Grid>
+                    </Frame>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
