@@ -8,19 +8,19 @@
              Title="Simple Embeded Data">
     <ListView>
         <ListView.ItemsSource>
-            <x:Array Type="{x:Type Color}">
-                <Color>Red</Color>
-                <Color>Green</Color>
-                <Color>Blue</Color>
-                <Color>Aqua</Color>
-                <Color>Purple</Color>
-                <Color>Yellow</Color>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>Back Sabbath</x:String>
+                <x:String>Ozzy Osbourne</x:String>
+                <x:String>Iron Maiden</x:String>
+                <x:String>Metallica</x:String>
+                <x:String>Motorhead</x:String>
+                <x:String>Judas Priest</x:String>
             </x:Array>
         </ListView.ItemsSource>
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
-                    <BoxView Color="{Binding}" />
+                    <Label Text="{Binding .}"/>
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
