@@ -53,6 +53,11 @@ namespace Etude.ViewModels
                     },
                     new Example
                     {
+                        Name = "Collection Views",
+                        Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set06()); }
+                    },
+                    new Example
+                    {
                         Name = "Page Transition Animations",
                         Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set04()); }
                     },
