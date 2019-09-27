@@ -1,5 +1,4 @@
-﻿using Etude.ViewModels;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace Etude.Views
 {
@@ -8,13 +7,6 @@ namespace Etude.Views
         public Example16()
         {
             InitializeComponent();
-        }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-
-            ((BaseViewModel)BindingContext).LoadData = true;
         }
     }
 }
