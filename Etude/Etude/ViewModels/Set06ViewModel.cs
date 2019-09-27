@@ -42,7 +42,12 @@ namespace Etude.ViewModels
                     {
                         Name = "Simple Collection View",
                         Act = async () => { await nav.PushAsync(new Example16()); }
-                    }
+                    },
+                    new Example
+                    {
+                        Name = "Template API Data",
+                        Act = async () => { await nav.PushAsync(new Example17()); }
+                    },
                 };
             });
         }

@@ -146,5 +146,24 @@ namespace Etude.Services
 
             return result;
         }
+
+        public async Task<RecipePuppyResponse> GetApiRecipePuppyAsync()
+        {
+            var result = new RecipePuppyResponse();
+            string url = "http://www.recipepuppy.com/api/?i=onions,garlic&q=pasta&p=3";
+
+            using (var client = new HttpClient())
+            {
+                var response = await client.GetAsync(new Uri(url));
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    result = JsonConvert.DeserializeObject<RecipePuppyResponse>(content);
+                }
+            }
+
+            return result;
+        }
     }
 }

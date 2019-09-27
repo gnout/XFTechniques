@@ -9,6 +9,13 @@ Techniques for Xamarin.Forms
 * [Acr.UserDialogs 7.0.4](https://github.com/aritchie/userdialogs) - All Projects
 * [Newtonsoft.Json 12.0.2](https://www.newtonsoft.com/json) - All Projects
 
+## API Lists
+
+* [Any API](https://any-api.com/)
+* [Public APIs](https://github.com/public-apis/public-apis)
+* [Browse APIs](https://apis.guru/browse-apis/)
+* [Recipe Puppy](http://www.recipepuppy.com/about/api/)
+
 ## Custom Controls (Set 01)
 
 ### Custom Control Behaviors (Example 01)
