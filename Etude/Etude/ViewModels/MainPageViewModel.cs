@@ -65,6 +65,11 @@ namespace Etude.ViewModels
                     {
                         Name = "Assorted",
                         Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set05()); }
+                    },
+                    new Example
+                    {
+                        Name = "Not so Xamarin",
+                        Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set07()); }
                     }
                 };
             });
