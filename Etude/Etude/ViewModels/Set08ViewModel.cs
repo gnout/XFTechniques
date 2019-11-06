@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace Etude.ViewModels
 {
-    public class Set05ViewModel : BaseViewModel
+    public class Set08ViewModel : BaseViewModel
     {
         public List<Example> Model
         {
@@ -25,7 +25,7 @@ namespace Etude.ViewModels
         private Example _selectedItem;
         #endregion
 
-        public Set05ViewModel()
+        public Set08ViewModel()
         {
             LoadDataCommand = new Command(async () => await InitAsync());
         }
@@ -40,13 +40,13 @@ namespace Etude.ViewModels
                 {
                     new Example
                     {
-                        Name = "Event to Command Behaviors",
-                        Act = async () => { await nav.PushAsync(new Example10()); }
+                        Name = "Animate Dialog Appearance",
+                        Act = async () => { await nav.PushAsync(new Example15()); }
                     },
                     new Example
                     {
-                        Name = "Font Awesome",
-                        Act = async () => { await nav.PushAsync(new Example13()); }
+                        Name = "Equal Height to Width",
+                        Act = async () => { await nav.PushAsync(new Example19()); }
                     }
                 };
             });
