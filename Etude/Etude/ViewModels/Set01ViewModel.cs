@@ -42,6 +42,11 @@ namespace Etude.ViewModels
                     {
                         Name = "Custom Control Behaviors",
                         Act = async () => { await nav.PushAsync(new Example01()); }
+                    },
+                    new Example
+                    {
+                        Name = "Markdown Control",
+                        Act = async () => { await nav.PushAsync(new Example20()); }
                     }
                 };
             });

@@ -8,6 +8,9 @@ Techniques for Xamarin.Forms
 
 * [Acr.UserDialogs 7.0.4](https://github.com/aritchie/userdialogs) - All Projects
 * [Newtonsoft.Json 12.0.2](https://www.newtonsoft.com/json) - All Projects
+* [Markdig 0.18.0](https://github.com/lunet-io/markdig) - All Projects (for the Markdown Control)
+* [SkiaSharp.Views.Forms 1.68.0](https://github.com/mono/SkiaSharp) - All Projects (for the Markdown Control)
+* [SkiaSharp.Svg 1.60.0](https://github.com/mono/SkiaSharp.Extended) - All Projects (for the Markdown Control)
 
 ## API Lists
 
@@ -22,6 +25,10 @@ Techniques for Xamarin.Forms
 
 Attache a behavior to a custom control. The behavior just checks if the entry contains a valid decimal number. If not, the it turns the font of the entry in red color.  
 The idea is based on the `stackoverflow` question that can be found [here](https://stackoverflow.com/questions/56986754/xamarin-forms-how-to-add-behaviors-to-custom-control)
+
+### Markdown Control (Example 20)
+
+This control can present markdown formated text. The entire control is a copy from a [NuGet Package](https://github.com/dotnet-ad/MarkdownView) that wasn't possible to install.
 
 ## Various NuGet Packages (Set 02)
 
@@ -79,4 +86,4 @@ A way to introduce events as commands in MVVM. The theory is in following [site]
 
 ### Font Awesome (Example 12)
 
-A tabbed page with icons from font awesome. The font needs to be installe din both platforms
+A tabbed page with icons from font awesome. The font needs to be installed in both platforms
