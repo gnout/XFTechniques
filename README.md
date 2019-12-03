@@ -10,7 +10,7 @@ Techniques for Xamarin.Forms
 * [Newtonsoft.Json 12.0.2](https://www.newtonsoft.com/json) - All Projects
 * [Markdig 0.18.0](https://github.com/lunet-io/markdig) - All Projects (for the Markdown Control)
 * [SkiaSharp.Views.Forms 1.68.0](https://github.com/mono/SkiaSharp) - All Projects (for the Markdown Control)
-* [SkiaSharp.Svg 1.60.0](https://github.com/mono/SkiaSharp.Extended) - All Projects (for the Markdown Control)
+* [SkiaSharp.Svg 1.60.1](https://github.com/mono/SkiaSharp.Extended) - All Projects (for the Markdown Control)
 
 ## API Lists
 
@@ -87,3 +87,10 @@ A way to introduce events as commands in MVVM. The theory is in following [site]
 ### Font Awesome (Example 12)
 
 A tabbed page with icons from font awesome. The font needs to be installed in both platforms
+
+### Compiled Bindings (Example 21)
+
+This is a way to define the data types that XAML is using.  
+An introduction can be found [here](https://channel9.msdn.com/Shows/XamarinShow/XamarinForms-101-Compiled-Bindings?utm_campaign=Weekly%2BXamarin&utm_medium=email&utm_source=Weekly_Xamarin_235)  
+In the example, there was a problem when I tried to use `<Label Text="{Binding Musicians[0]}"/>`  
+The error that I was getting was `Object reference not set to an instance of object` because the `Musicians` is a `List<string>` I guess.

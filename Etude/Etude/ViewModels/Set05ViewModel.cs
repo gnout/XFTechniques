@@ -47,6 +47,11 @@ namespace Etude.ViewModels
                     {
                         Name = "Font Awesome",
                         Act = async () => { await nav.PushAsync(new Example13()); }
+                    },
+                    new Example
+                    {
+                        Name = "Compiled Bindings",
+                        Act = async () => { await nav.PushAsync(new Example21()); }
                     }
                 };
             });
