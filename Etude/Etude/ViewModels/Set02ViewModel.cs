@@ -42,7 +42,12 @@ namespace Etude.ViewModels
                     {
                         Name = "ACR User Dialogs",
                         Act = async () => { await nav.PushAsync(new Example02()); }
-                    }
+                    },
+                    new Example
+                    {
+                        Name = "Fody",
+                        Act = async () => { await nav.PushAsync(new Example22()); }
+                    },
                 };
             });
         }

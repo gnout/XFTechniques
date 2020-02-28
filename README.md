@@ -11,6 +11,8 @@ Techniques for Xamarin.Forms
 * [Markdig 0.18.0](https://github.com/lunet-io/markdig) - All Projects (for the Markdown Control)
 * [SkiaSharp.Views.Forms 1.68.0](https://github.com/mono/SkiaSharp) - All Projects (for the Markdown Control)
 * [SkiaSharp.Svg 1.60.1](https://github.com/mono/SkiaSharp.Extended) - All Projects (for the Markdown Control)
+* [Fody 6.0.6](https://github.com/Fody/Fody) - All Projects
+* [Fody Method Decorator 1.1.0](https://github.com/Fody/MethodDecorator) - All Projects
 
 ## API Lists
 
@@ -35,6 +37,44 @@ This control can present markdown formated text. The entire control is a copy fr
 ### ACR User Dialogs (Example 02)
 
 Very easy way to create dialogs and especially __loading__ screens. One thing to remember is that dialogs cannot be inside loading screens.
+
+
+
+images and the rest
+
+36x36 (0.75x) for low-density (ldpi)
+48x48 (1.0x baseline) for medium-density (mdpi)
+72x72 (1.5x) for high-density (hdpi)
+96x96 (2.0x) for extra-high-density (xhdpi)
+144x144 (3.0x) for extra-extra-high-density (xxhdpi)
+192x192 (4.0x) for extra-extra-extra-high-density (xxxhdpi)
+
+
+
+
+
+
+
+
+
+### Fody Method Decorator (Example 22)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## List Views (Set 03)
 
