@@ -8,6 +8,11 @@ Techniques for Xamarin.Forms
 
 * [Acr.UserDialogs 7.0.4](https://github.com/aritchie/userdialogs) - All Projects
 * [Newtonsoft.Json 12.0.2](https://www.newtonsoft.com/json) - All Projects
+* [Markdig 0.18.0](https://github.com/lunet-io/markdig) - All Projects (for the Markdown Control)
+* [SkiaSharp.Views.Forms 1.68.0](https://github.com/mono/SkiaSharp) - All Projects (for the Markdown Control)
+* [SkiaSharp.Svg 1.60.1](https://github.com/mono/SkiaSharp.Extended) - All Projects (for the Markdown Control)
+* [Fody 6.0.6](https://github.com/Fody/Fody) - All Projects
+* [Fody Method Decorator 1.1.0](https://github.com/Fody/MethodDecorator) - All Projects
 
 ## API Lists
 
@@ -23,11 +28,53 @@ Techniques for Xamarin.Forms
 Attache a behavior to a custom control. The behavior just checks if the entry contains a valid decimal number. If not, the it turns the font of the entry in red color.  
 The idea is based on the `stackoverflow` question that can be found [here](https://stackoverflow.com/questions/56986754/xamarin-forms-how-to-add-behaviors-to-custom-control)
 
+### Markdown Control (Example 20)
+
+This control can present markdown formated text. The entire control is a copy from a [NuGet Package](https://github.com/dotnet-ad/MarkdownView) that wasn't possible to install.
+
 ## Various NuGet Packages (Set 02)
 
 ### ACR User Dialogs (Example 02)
 
 Very easy way to create dialogs and especially __loading__ screens. One thing to remember is that dialogs cannot be inside loading screens.
+
+
+
+images and the rest
+
+36x36 (0.75x) for low-density (ldpi)
+48x48 (1.0x baseline) for medium-density (mdpi)
+72x72 (1.5x) for high-density (hdpi)
+96x96 (2.0x) for extra-high-density (xhdpi)
+144x144 (3.0x) for extra-extra-high-density (xxhdpi)
+192x192 (4.0x) for extra-extra-extra-high-density (xxxhdpi)
+
+
+
+
+
+
+
+
+
+### Fody Method Decorator (Example 22)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## List Views (Set 03)
 
@@ -79,4 +126,11 @@ A way to introduce events as commands in MVVM. The theory is in following [site]
 
 ### Font Awesome (Example 12)
 
-A tabbed page with icons from font awesome. The font needs to be installe din both platforms
+A tabbed page with icons from font awesome. The font needs to be installed in both platforms
+
+### Compiled Bindings (Example 21)
+
+This is a way to define the data types that XAML is using.  
+An introduction can be found [here](https://channel9.msdn.com/Shows/XamarinShow/XamarinForms-101-Compiled-Bindings?utm_campaign=Weekly%2BXamarin&utm_medium=email&utm_source=Weekly_Xamarin_235)  
+In the example, there was a problem when I tried to use `<Label Text="{Binding Musicians[0]}"/>`  
+The error that I was getting was `Object reference not set to an instance of object` because the `Musicians` is a `List<string>` I guess.

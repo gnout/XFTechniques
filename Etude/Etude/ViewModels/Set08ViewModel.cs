@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace Etude.ViewModels
 {
-    public class Set04ViewModel : BaseViewModel
+    public class Set08ViewModel : BaseViewModel
     {
         public List<Example> Model
         {
@@ -25,7 +25,7 @@ namespace Etude.ViewModels
         private Example _selectedItem;
         #endregion
 
-        public Set04ViewModel()
+        public Set08ViewModel()
         {
             LoadDataCommand = new Command(async () => await InitAsync());
         }
@@ -40,28 +40,13 @@ namespace Etude.ViewModels
                 {
                     new Example
                     {
-                        Name = "Fade In",
-                        Act = async () => { await nav.PushAsync(new Example05()); }
+                        Name = "Animate Dialog Appearance",
+                        Act = async () => { await nav.PushAsync(new Example15()); }
                     },
                     new Example
                     {
-                        Name = "From Different Directions",
-                        Act = async () => { await nav.PushAsync(new Example06()); }
-                    },
-                    new Example
-                    {
-                        Name = "Turn the Page",
-                        Act = async () => { await nav.PushAsync(new Example07()); }
-                    },
-                    new Example
-                    {
-                        Name = "Coming from above",
-                        Act = async () => { await nav.PushAsync(new Example08()); }
-                    },
-                    new Example
-                    {
-                        Name = "Scale up and dissappear",
-                        Act = async () => { await nav.PushAsync(new Example09()); }
+                        Name = "Equal Height to Width",
+                        Act = async () => { await nav.PushAsync(new Example19()); }
                     }
                 };
             });

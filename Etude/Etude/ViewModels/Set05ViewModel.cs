@@ -50,8 +50,8 @@ namespace Etude.ViewModels
                     },
                     new Example
                     {
-                        Name = "Animate Dialog Appearance",
-                        Act = async () => { await nav.PushAsync(new Example15()); }
+                        Name = "Compiled Bindings",
+                        Act = async () => { await nav.PushAsync(new Example21()); }
                     }
                 };
             });

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Etude.ViewModels"
+             xmlns:controls="clr-namespace:Etude.Controls"
+             mc:Ignorable="d"
+             x:Class="Etude.Views.Example20"
+             Title="Markdown Control">
+    <ContentPage.BindingContext>
+        <vm:Example20ViewModel />
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <controls:MarkdownView Markdown="{Binding Notes}"/>
+    </ScrollView>
+</ContentPage>
