@@ -13,6 +13,14 @@ Techniques for Xamarin.Forms
 * [SkiaSharp.Svg 1.60.1](https://github.com/mono/SkiaSharp.Extended) - All Projects (for the Markdown Control)
 * [Fody 6.0.6](https://github.com/Fody/Fody) - All Projects
 * [Fody Method Decorator 1.1.0](https://github.com/Fody/MethodDecorator) - All Projects
+* [ReactiveUI 11.2.1](https://reactiveui.net/) - All Projects
+* [ReactiveUI.XamForms 11.2.1](https://reactiveui.net/) - All Projects
+* [ReactiveUI.Events.XamForms 11.2.1](https://reactiveui.net/) - All Projects
+* [ReactiveUI.Fody 11.2.1](https://reactiveui.net/) - All Projects
+
+
+Reactive
+https://www.youtube.com/watch?v=vvBnn6GiM_k
 
 ## API Lists
 

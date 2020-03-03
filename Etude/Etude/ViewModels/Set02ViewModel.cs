@@ -48,6 +48,11 @@ namespace Etude.ViewModels
                         Name = "Fody",
                         Act = async () => { await nav.PushAsync(new Example22()); }
                     },
+                    new Example
+                    {
+                        Name = "ReactiveUI",
+                        Act = async () => { await nav.PushAsync(new Example23()); }
+                    }
                 };
             });
         }
