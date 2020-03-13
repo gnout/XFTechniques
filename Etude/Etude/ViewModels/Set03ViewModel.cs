@@ -62,6 +62,11 @@ namespace Etude.ViewModels
                     {
                         Name = "ListView with button",
                         Act = async () => { await nav.PushAsync(new Example14()); }
+                    },
+                    new Example
+                    {
+                        Name = "Android Fast Scrolling",
+                        Act = async () => { await nav.PushAsync(new Example24()); }
                     }
                 };
             });

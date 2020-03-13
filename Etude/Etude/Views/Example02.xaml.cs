@@ -1,10 +1,7 @@
-﻿using Etude.ViewModels;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 
 namespace Etude.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Example02 : ContentPage
     {
         public Example02()
