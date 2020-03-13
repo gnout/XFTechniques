@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etude.Android", "Etude\Etud
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etude.iOS", "Etude\Etude.iOS\Etude.iOS.csproj", "{6C19FDDE-793A-4438-AC61-69CE19364D03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etude", "Etude\Etude\Etude.csproj", "{AA76F5A2-B9B9-4BC3-87AF-7461F3379FB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Etude", "Etude\Etude\Etude.csproj", "{AA76F5A2-B9B9-4BC3-87AF-7461F3379FB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,7 +38,6 @@ Global
 		{401D3B6D-1B47-4D4C-BCE8-D3488BFC4FA9}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{401D3B6D-1B47-4D4C-BCE8-D3488BFC4FA9}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
 		{6C19FDDE-793A-4438-AC61-69CE19364D03}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
-		{6C19FDDE-793A-4438-AC61-69CE19364D03}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{6C19FDDE-793A-4438-AC61-69CE19364D03}.Debug|Any CPU.Deploy.0 = Debug|iPhoneSimulator
 		{6C19FDDE-793A-4438-AC61-69CE19364D03}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{6C19FDDE-793A-4438-AC61-69CE19364D03}.Debug|iPhone.Build.0 = Debug|iPhone
