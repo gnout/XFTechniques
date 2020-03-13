@@ -56,22 +56,22 @@
       <Version>7.1.0.440</Version>
     </PackageReference>
     <PackageReference Include="Markdig">
-      <Version>0.18.1</Version>
+      <Version>0.18.3</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.3</Version>
     </PackageReference>
     <PackageReference Include="ReactiveUI">
-      <Version>11.2.1</Version>
+      <Version>11.2.3</Version>
     </PackageReference>
     <PackageReference Include="ReactiveUI.Events.XamForms">
-      <Version>11.2.1</Version>
+      <Version>11.2.3</Version>
     </PackageReference>
     <PackageReference Include="ReactiveUI.Fody">
-      <Version>11.2.1</Version>
+      <Version>11.2.3</Version>
     </PackageReference>
     <PackageReference Include="ReactiveUI.XamForms">
-      <Version>11.2.1</Version>
+      <Version>11.2.3</Version>
     </PackageReference>
     <PackageReference Include="SkiaSharp.Svg">
       <Version>1.60.0</Version>
@@ -87,7 +87,7 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Android.Support.CustomTabs" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.0" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -141,6 +141,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="FodyWeavers.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
