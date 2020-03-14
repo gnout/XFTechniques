@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:vm="clr-namespace:Etude.ViewModels"
+             xmlns:behaviors="clr-namespace:Etude.Behaviors"
+             x:Class="Etude.Views.Set02Example01"
+             Title="Animate Dialog Appearance">
+    <ContentPage.BindingContext>
+        <vm:Set02Example01ViewModel/>
+    </ContentPage.BindingContext>
+    <AbsoluteLayout>
+        <StackLayout AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
+                     AbsoluteLayout.LayoutFlags="All">
+            <Button Text="Show"
+                    Command="{Binding ShowDialogCommand}"/>
+        </StackLayout>
+
+        <!-- Dialog Layer -->
+        <ContentView x:Name="DialogOverlayLayer"
+                     AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                     AbsoluteLayout.LayoutFlags="All"
+                     IsVisible="{Binding DialogIsVisible}"
+                     BackgroundColor="#C9898980">
+            <Grid ColumnSpacing="0"
+                  RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+
+                <BoxView Grid.Row="0" 
+                         BackgroundColor="Transparent">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding HideDialogCommand}" 
+                                              NumberOfTapsRequired="1" />
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+
+                <!-- The actual Dialog that can be replaced with any ContentView -->
+                <ContentView Grid.Row="1"
+                             IsVisible="{Binding DialogIsVisible}">
+                    <ContentView.Behaviors>
+                        <behaviors:AnimateViewAppearanceBehavior AnimateControl="{Binding Source={x:Reference DialogFrame}}" />
+                    </ContentView.Behaviors>
+                    <Frame x:Name="DialogFrame"
+                           VerticalOptions="FillAndExpand"
+                           HorizontalOptions="FillAndExpand"
+                           Padding="18,5,18,10"
+                           HasShadow="False"
+                           CornerRadius="20"
+                           TranslationY="12">
+
+                        <Grid RowSpacing="0"
+                              ColumnSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="2"/>
+                                <RowDefinition Height="24"/>
+                                <RowDefinition Height="2"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <!-- Close -->
+                            <Grid Grid.Row="1"
+                                  RowSpacing="0"
+                                  ColumnSpacing="0"
+                                  HorizontalOptions="Center"
+                                  VerticalOptions="Center"
+                                  CascadeInputTransparent="True">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="7"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="7"/>
+                                </Grid.RowDefinitions>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding HideDialogCommand}" 
+                                                          NumberOfTapsRequired="1"/>
+                                </Grid.GestureRecognizers>
+                                <Frame Grid.Row="1"
+                                       BackgroundColor="LightGray"
+                                       CornerRadius="5"
+                                       HasShadow="False"
+                                       InputTransparent="True"
+                                       WidthRequest="50"/>
+                            </Grid>
+
+                            <!-- Content -->
+                            <Label Grid.Row="3"
+                                   FontSize="24"
+                                   HorizontalOptions="CenterAndExpand"
+                                   VerticalOptions="CenterAndExpand"
+                                   Text="Content"/>
+                        </Grid>
+                    </Frame>
+                </ContentView>
+            </Grid>
+        </ContentView>
+    </AbsoluteLayout>
+</ContentPage>
