@@ -25,22 +25,22 @@ namespace Etude.ViewModels
 
         public Set03Example01ViewModel()
         {
-            GenerateSaltCommand = new Command(GenerateSaltExecute);
-            GenerateRealRandomNumberCommand = new Command(GenerateRealRandomNumberExecute);
-            GenerateRandomPasswordCommand = new Command(GenerateRandomPasswordExecute);
+            GenerateSaltCommand = new Command(ExecuteGenerateSaltCommand);
+            GenerateRealRandomNumberCommand = new Command(ExecuteGenerateRealRandomNumberCommand);
+            GenerateRandomPasswordCommand = new Command(ExecuteGenerateRandomPasswordCommand);
         }
 
-        private void GenerateSaltExecute()
+        private void ExecuteGenerateSaltCommand()
         {
             Result = CreateSalt(20);
         }
 
-        private void GenerateRealRandomNumberExecute()
+        private void ExecuteGenerateRealRandomNumberCommand()
         {
             Result = Math.Abs(CreateRandom()).ToString();
         }
 
-        private void GenerateRandomPasswordExecute()
+        private void ExecuteGenerateRandomPasswordCommand()
         {
             Result = CreateRandomPassword(15);
         }
@@ -50,7 +50,9 @@ namespace Etude.ViewModels
         {
             var rng = RandomNumberGenerator.Create();
             var buff = new byte[size];
+
             rng.GetBytes(buff);
+
             return Convert.ToBase64String(buff);
         }
 
@@ -59,20 +61,24 @@ namespace Etude.ViewModels
         {
             var rng = RandomNumberGenerator.Create();
             var buff = new byte[4];
+
             rng.GetBytes(buff);
+
             return BitConverter.ToInt32(buff, 0);
         }
 
         // Create a random password
         private string CreateRandomPassword(int passwordLength)
         {
-            string allowedChars = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ0123456789!@$?_-";
-            char[] chars = new char[passwordLength];
-            Random rd = new Random();
+            var allowedChars = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ0123456789!@$?_-";
+            var chars = new char[passwordLength];
+            var rd = new Random();
+
             for (int i = 0; i < passwordLength; i++)
             {
                 chars[i] = allowedChars[rd.Next(0, allowedChars.Length)];
             }
+
             return new string(chars);
         }
     }

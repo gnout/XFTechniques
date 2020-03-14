@@ -22,16 +22,16 @@ namespace Etude.ViewModels
 
         public Set02Example01ViewModel()
         {
-            ShowDialogCommand = new Command(ShowDialogExecute);
-            HideDialogCommand = new Command(HideDialogExecute);
+            ShowDialogCommand = new Command(ExecuteShowDialogCommand);
+            HideDialogCommand = new Command(ExecuteHideDialogCommand);
         }
 
-        private void ShowDialogExecute()
+        private void ExecuteShowDialogCommand()
         {
             DialogIsVisible = true;
         }
 
-        private void HideDialogExecute()
+        private void ExecuteHideDialogCommand()
         {
             DialogIsVisible = false;
         }
