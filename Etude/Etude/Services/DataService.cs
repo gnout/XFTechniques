@@ -1,10 +1,11 @@
-﻿using Etude.Models;
+﻿using Etude.Helpers;
+using Etude.Models;
 using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
+using System.Linq;
 using System.Reflection;
-using System.Text;
 
 namespace Etude.Services
 {
@@ -35,6 +36,16 @@ namespace Etude.Services
             catch { }
 
             return _beers;
+        }
+
+        public ObservableCollection<Grouping<string, Beer>> GroupBeerList(IEnumerable<Beer> beers)
+        {
+            var sortedBeers = beers
+                .OrderBy(a => a.Name)
+                .GroupBy(b => b.Group)
+                .Select(c => new Grouping<string, Beer>(c.Key, c));
+
+            return new ObservableCollection<Grouping<string, Beer>>(sortedBeers);
         }
     }
 }

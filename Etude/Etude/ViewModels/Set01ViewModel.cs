@@ -42,6 +42,16 @@ namespace Etude.ViewModels
                     {
                         Name = "Android Fast Scrolling",
                         Act = async () => { await nav.PushAsync(new Set01Example01()); }
+                    },
+                    new Example
+                    {
+                        Name = "Expand / Collapse Tapped Cell",
+                        Act = async () => { await nav.PushAsync(new Set01Example02()); }
+                    },
+                    new Example
+                    {
+                        Name = "Grouped List",
+                        Act = async () => { await nav.PushAsync(new Set01Example03()); }
                     }
                 };
             });

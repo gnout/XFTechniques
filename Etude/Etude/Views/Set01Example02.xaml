@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:vm="clr-namespace:Etude.ViewModels"
+             xmlns:converters="clr-namespace:Etude.Converters"
+             x:Class="Etude.Views.Set01Example02"
+             Title="Expand / Collapse Tapped Cell">
+    <ContentPage.BindingContext>
+        <vm:Set01Example02ViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:EqualsParameterContextConverter x:Key="EqualsParameterContextConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ListView x:Name="listView"
+              ItemsSource="{Binding Model}"
+              SelectedItem="{Binding SelectedItem}"
+              HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout x:Name="cell">
+                        <Label Margin="0,12,0,12" Text="{Binding Name}"/>
+                        <Label Text="{Binding Group}"
+                               BackgroundColor="Beige"
+                               IsVisible="{Binding Source={x:Reference listView}, Path=SelectedItem, 
+                                                   Converter={StaticResource EqualsParameterContextConverter}, 
+                                                   ConverterParameter={x:Reference cell}}">
+                        </Label>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

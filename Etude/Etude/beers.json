@@ -1,8 +1,8 @@
-[
+ï»¿[
   {
     "alcohol": 8.3,
     "detailsKey": "4e1e8f47-5484-4a1e-bc9e-02417039d4f2",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Hopus",
     "price": 4.0,
@@ -13,7 +13,7 @@
   {
     "alcohol": 7.0,
     "detailsKey": "ae65f60c-c319-4cfa-966c-59f862268f8e",
-    "group": "Bières d'Abbaye",
+    "group": "BiÃ¨res d'Abbaye",
     "groupSortOrder": 3,
     "name": "Ciney Blonde",
     "price": 4.0,
@@ -24,7 +24,7 @@
   {
     "alcohol": 7.0,
     "detailsKey": "08143f0d-d9ec-4f98-be59-2a781a21da40",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Gordon",
     "price": 4.0,
@@ -35,7 +35,7 @@
   {
     "alcohol": 7.6,
     "detailsKey": "2f61e196-e45b-415c-a893-097a2c06e08a",
-    "group": "Bières Trappistes",
+    "group": "BiÃ¨res Trappistes",
     "groupSortOrder": 2,
     "name": "Monts des Cats",
     "price": 5.0,
@@ -46,7 +46,7 @@
   {
     "alcohol": 9.0,
     "detailsKey": "e40d19ec-c468-4f02-9154-01dd60dfbb0f",
-    "group": "Bières d'Abbaye",
+    "group": "BiÃ¨res d'Abbaye",
     "groupSortOrder": 3,
     "name": "Augustijn Grand Cru",
     "price": 4.5,
@@ -57,7 +57,7 @@
   {
     "alcohol": 8.0,
     "detailsKey": "60673b82-770e-4fe9-a47a-93e2cdd5debc",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "La Chouffe",
     "price": 9.0,
@@ -79,7 +79,7 @@
   {
     "alcohol": 4.5,
     "detailsKey": "97db64c0-396c-466e-9cde-919f3b97081c",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Corona",
     "price": 4.0,
@@ -101,7 +101,7 @@
   {
     "alcohol": 10.0,
     "detailsKey": "e79624ee-2f38-466c-ac10-e22607313598",
-    "group": "Bières d'Abbaye",
+    "group": "BiÃ¨res d'Abbaye",
     "groupSortOrder": 3,
     "name": "Grimbergen Brune",
     "price": 4.0,
@@ -123,7 +123,7 @@
   {
     "alcohol": 6.0,
     "detailsKey": "d958776d-70e2-4ba3-a789-9d97ce434f6a",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Martin's Pale Ale",
     "price": 4.0,
@@ -145,7 +145,7 @@
   {
     "alcohol": 4.6,
     "detailsKey": "d9822e91-a239-46f4-beab-a83f91f99404",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Carlsberg",
     "price": 3.0,
@@ -189,7 +189,7 @@
   {
     "alcohol": 5.2,
     "detailsKey": "d0a41c1d-42b2-42b7-b0c3-7c95bae77344",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Rodenbach",
     "price": 3.0,
@@ -200,7 +200,7 @@
   {
     "alcohol": 5.9,
     "detailsKey": "6ff4e0fb-46cb-4e8b-905f-fef98097b3ed",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Desperados",
     "price": 4.0,
@@ -211,7 +211,7 @@
   {
     "alcohol": 9.0,
     "detailsKey": "8faa894d-dd37-4cf2-983d-cfc72e9f248f",
-    "group": "Bières d'Abbaye",
+    "group": "BiÃ¨res d'Abbaye",
     "groupSortOrder": 3,
     "name": "Brigand",
     "price": 4.0,
@@ -222,7 +222,7 @@
   {
     "alcohol": 5.2,
     "detailsKey": "cebde533-d784-4176-acb2-5935347e3100",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "De Koninck",
     "price": 3.5,
@@ -233,7 +233,7 @@
   {
     "alcohol": 6.6,
     "detailsKey": "96e22809-5d07-4086-9004-ef959c0b9905",
-    "group": "Bières Trappistes",
+    "group": "BiÃ¨res Trappistes",
     "groupSortOrder": 2,
     "name": "Westmalle Dubbel",
     "price": 4.5,
@@ -255,7 +255,7 @@
   {
     "alcohol": 8.0,
     "detailsKey": "60673b82-770e-4fe9-a47a-93e2cdd5debc",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "La Chouffe",
     "price": 4.0,
@@ -266,7 +266,7 @@
   {
     "alcohol": 8.5,
     "detailsKey": "5fa7fec6-dc2f-4648-bbf9-72d527c78612",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "La Guillotine",
     "price": 4.0,
@@ -288,7 +288,7 @@
   {
     "alcohol": 9.2,
     "detailsKey": "2d27edf3-185c-46a4-9f79-bdcb2750c2be",
-    "group": "Bières Trappistes",
+    "group": "BiÃ¨res Trappistes",
     "groupSortOrder": 2,
     "name": "Rochefort 8",
     "price": 4.5,
@@ -301,7 +301,7 @@
     "detailsKey": "1a7204b9-0fbc-4b8c-966e-d430a23dd3bd",
     "group": "Bieres aux Fruits",
     "groupSortOrder": 5,
-    "name": "Pêcheresse",
+    "name": "PÃªcheresse",
     "price": 3.5,
     "sortOrder": 6,
     "style": "Lambic - Fruited",
@@ -312,7 +312,7 @@
     "detailsKey": "7bcc9f61-8757-4fb6-85b6-3dfb04c7007f",
     "group": "Bieres aux Fruits",
     "groupSortOrder": 5,
-    "name": "Hoegaarden Rosée",
+    "name": "Hoegaarden RosÃ©e",
     "price": 3.5,
     "sortOrder": 3,
     "style": "Flavored - Fruit",
@@ -321,7 +321,7 @@
   {
     "alcohol": 7.5,
     "detailsKey": "3b648806-b6e6-41ef-a9eb-e11dff97b6ca",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Palm Royale",
     "price": 4.0,
@@ -343,7 +343,7 @@
   {
     "alcohol": 9.0,
     "detailsKey": "024d39de-951a-4f88-8a7f-a9453f18f448",
-    "group": "Bières Trappistes",
+    "group": "BiÃ¨res Trappistes",
     "groupSortOrder": 2,
     "name": "Chimay Blue",
     "price": 4.5,
@@ -365,7 +365,7 @@
   {
     "alcohol": 6.8,
     "detailsKey": "b9e07c9d-ddfa-448c-8b5f-f5fb134cbf42",
-    "group": "Bières d'Abbaye",
+    "group": "BiÃ¨res d'Abbaye",
     "groupSortOrder": 3,
     "name": "Affligem",
     "price": 4.0,
@@ -376,9 +376,9 @@
   {
     "alcohol": 7.5,
     "detailsKey": "1c6f255c-a637-4fd6-9562-1aad59aa19e4",
-    "group": "Bières d'Abbaye",
+    "group": "BiÃ¨res d'Abbaye",
     "groupSortOrder": 3,
-    "name": "Ramée Blonde-Ambrée",
+    "name": "RamÃ©e Blonde-AmbrÃ©e",
     "price": 4.5,
     "sortOrder": 1,
     "style": "Belgian Ale - Strong Pale",
@@ -409,7 +409,7 @@
   {
     "alcohol": 7.5,
     "detailsKey": "a44f93c0-36e9-4548-81db-8d20761f3033",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Jacob-beer Is Music",
     "price": 4.0,
@@ -431,7 +431,7 @@
   {
     "alcohol": 9.0,
     "detailsKey": "27863943-b124-47f7-9490-2ff87e07b329",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Hercule Stout",
     "price": 4.5,
@@ -453,7 +453,7 @@
   {
     "alcohol": 6.3,
     "detailsKey": "47ef65ec-cf7b-4fe4-bde9-b2a7816d792d",
-    "group": "Bières d'Abbaye",
+    "group": "BiÃ¨res d'Abbaye",
     "groupSortOrder": 3,
     "name": "La Gauloise Blonde",
     "price": 4.0,
@@ -486,7 +486,7 @@
   {
     "alcohol": 4.5,
     "detailsKey": "2b49eea8-8435-4b68-9259-f90f523b7411",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Mort Subite Gueuze Lambic",
     "price": 3.0,
@@ -508,7 +508,7 @@
   {
     "alcohol": 6.0,
     "detailsKey": "e24ea91e-e665-40cb-9a03-2d45687b6b06",
-    "group": "Bières d'Abbaye",
+    "group": "BiÃ¨res d'Abbaye",
     "groupSortOrder": 3,
     "name": "Brugse Zot",
     "price": 4.0,
@@ -552,9 +552,9 @@
   {
     "alcohol": 8.0,
     "detailsKey": "eea5e29c-0b48-4402-a6ac-fec592a7cd27",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
-    "name": "Barbãr Blonde",
+    "name": "BarbÃ£r Blonde",
     "price": 4.0,
     "sortOrder": 24,
     "style": "Belgian Ale - Strong Pale",
@@ -563,7 +563,7 @@
   {
     "alcohol": 8.0,
     "detailsKey": "8a273436-34db-4cfd-bec5-3550ae51fc2c",
-    "group": "Bières Trappistes",
+    "group": "BiÃ¨res Trappistes",
     "groupSortOrder": 2,
     "name": "Chimay Blonde",
     "price": 4.5,
@@ -574,7 +574,7 @@
   {
     "alcohol": 9.0,
     "detailsKey": "0f296e51-9685-4ad5-a21f-a1163735a1da",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Gouden Carolus Tripel",
     "price": 4.5,
@@ -585,7 +585,7 @@
   {
     "alcohol": 8.0,
     "detailsKey": "46e5bebb-8e43-4103-a5f4-c8c7a1fae55f",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Omer",
     "price": 4.0,
@@ -596,7 +596,7 @@
   {
     "alcohol": 7.5,
     "detailsKey": "fc2d8717-3742-4d93-954c-617f2fd41904",
-    "group": "Bières d'Abbaye",
+    "group": "BiÃ¨res d'Abbaye",
     "groupSortOrder": 3,
     "name": "Leffe Royale",
     "price": 4.5,
@@ -607,7 +607,7 @@
   {
     "alcohol": 9.5,
     "detailsKey": "7f41ffd3-3601-401f-854d-677d8acc7ae2",
-    "group": "Bières Trappistes",
+    "group": "BiÃ¨res Trappistes",
     "groupSortOrder": 2,
     "name": "Westmalle Tripel",
     "price": 4.5,
@@ -629,7 +629,7 @@
   {
     "alcohol": 4.5,
     "detailsKey": "c963656b-e798-42a9-8320-b1db319c6286",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Somersby",
     "price": 4.0,
@@ -642,7 +642,7 @@
     "detailsKey": "cf6704b6-10b2-4b39-a3e5-fd1c09f8260b",
     "group": "Bieres aux Fruits",
     "groupSortOrder": 5,
-    "name": "Fantôme Chocolat",
+    "name": "FantÃ´me Chocolat",
     "price": 4.0,
     "sortOrder": 10,
     "style": "Saison/Farmhouse - Flavored",
@@ -651,7 +651,7 @@
   {
     "alcohol": 9.0,
     "detailsKey": "a6c35346-45d6-44f0-8bd3-8fd7e23784e4",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Caulier 28 Tripel",
     "price": 4.5,
@@ -662,7 +662,7 @@
   {
     "alcohol": 10.0,
     "detailsKey": "112864cf-311b-48d6-84b2-de1bd9e86073",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Gulden Draak",
     "price": 4.5,
@@ -717,9 +717,9 @@
   {
     "alcohol": 8.5,
     "detailsKey": "60f4748f-ad77-4c5a-992c-5bd992e40666",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
-    "name": "Bush Pêche Mel",
+    "name": "Bush PÃªche Mel",
     "price": 4.0,
     "sortOrder": 14,
     "style": "Flavored - Fruit",
@@ -728,7 +728,7 @@
   {
     "alcohol": 4.2,
     "detailsKey": "7fc1c3e8-415f-4d22-a6f4-0caa8ac8b4c8",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Guiness",
     "price": 4.5,
@@ -739,7 +739,7 @@
   {
     "alcohol": 0.3,
     "detailsKey": "dfb159a2-d753-4528-8c99-f15b5474273f",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Palm Green NA",
     "price": 3.0,
@@ -750,7 +750,7 @@
   {
     "alcohol": 10.2,
     "detailsKey": "9d8cffa7-978e-4fac-9519-d37490a7bf53",
-    "group": "Bières Trappistes",
+    "group": "BiÃ¨res Trappistes",
     "groupSortOrder": 2,
     "name": "Westvleteren",
     "price": 15.0,
@@ -794,7 +794,7 @@
   {
     "alcohol": 6.7,
     "detailsKey": "c9c298bf-e268-4781-a7d5-72d5c59526f5",
-    "group": "Bières d'Abbaye",
+    "group": "BiÃ¨res d'Abbaye",
     "groupSortOrder": 3,
     "name": "Grimbergen Blonde",
     "price": 4.0,
@@ -805,7 +805,7 @@
   {
     "alcohol": 4.2,
     "detailsKey": "7cac27a0-416f-48f4-8529-3e93fdb5dbc3",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Faro Lambic",
     "price": 3.0,
@@ -838,7 +838,7 @@
   {
     "alcohol": 10.5,
     "detailsKey": "32e8c2f7-7b49-4a97-9249-85bd7a381843",
-    "group": "Bières d'Abbaye",
+    "group": "BiÃ¨res d'Abbaye",
     "groupSortOrder": 3,
     "name": "Val Dieu Grand Cru",
     "price": 5.0,
@@ -871,7 +871,7 @@
   {
     "alcohol": 9.0,
     "detailsKey": "f32a17fe-121e-4ab4-ae3e-a7b7b4ac1e96",
-    "group": "Bières d'Abbaye",
+    "group": "BiÃ¨res d'Abbaye",
     "groupSortOrder": 3,
     "name": "Leffe 9",
     "price": 4.0,
@@ -893,7 +893,7 @@
   {
     "alcohol": 12.0,
     "detailsKey": "42a6c5e9-ee0e-4c68-8f41-142446c950a8",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Malheur",
     "price": 5.0,
@@ -904,7 +904,7 @@
   {
     "alcohol": 5.0,
     "detailsKey": "2fc0a703-17c5-4df2-8c5d-2cc577e53471",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Heineken",
     "price": 3.0,
@@ -915,7 +915,7 @@
   {
     "alcohol": 5.5,
     "detailsKey": "4cd48999-3655-4015-abe9-e433d283e67f",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Bastogne Blonde",
     "price": 5.0,
@@ -926,7 +926,7 @@
   {
     "alcohol": 12.0,
     "detailsKey": "d657cd53-75a5-4d94-9418-7baa849c687e",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Bush 12",
     "price": 4.5,
@@ -948,7 +948,7 @@
   {
     "alcohol": 6.2,
     "detailsKey": "af6d6f9b-5d17-43d8-802b-7420e4f4c358",
-    "group": "Bières Trappistes",
+    "group": "BiÃ¨res Trappistes",
     "groupSortOrder": 2,
     "name": "Orval",
     "price": 4.5,
@@ -959,7 +959,7 @@
   {
     "alcohol": 8.5,
     "detailsKey": "34ea8399-a3bb-417f-9240-9a2105cecd57",
-    "group": "Bières d'Abbaye",
+    "group": "BiÃ¨res d'Abbaye",
     "groupSortOrder": 3,
     "name": "St. Feuillien",
     "price": 4.0,
@@ -970,7 +970,7 @@
   {
     "alcohol": 11.0,
     "detailsKey": "fea5ef96-f3d1-4659-b495-bc911ac01b1f",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Kasteel Brune",
     "price": 4.0,
@@ -981,7 +981,7 @@
   {
     "alcohol": 5.0,
     "detailsKey": "2f563144-4c83-46ff-857c-b2b4f669734b",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Strongbow",
     "price": 4.0,
@@ -992,7 +992,7 @@
   {
     "alcohol": 5.2,
     "detailsKey": "49933c69-456b-40be-97a3-9e837a546b03",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Vedett",
     "price": 3.0,
@@ -1003,7 +1003,7 @@
   {
     "alcohol": 5.0,
     "detailsKey": "ece11da9-bf3c-409a-ab6f-bead597c55db",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Bourgogne des Flandres",
     "price": 4.0,
@@ -1047,7 +1047,7 @@
   {
     "alcohol": 10.0,
     "detailsKey": "6b1b1344-50cd-4e54-b79c-c2b381c76c1c",
-    "group": "Bières d'Abbaye",
+    "group": "BiÃ¨res d'Abbaye",
     "groupSortOrder": 3,
     "name": "St. Bernardus 12",
     "price": 5.0,
@@ -1069,7 +1069,7 @@
   {
     "alcohol": 8.0,
     "detailsKey": "dda36f6d-30e3-4128-b4ed-cbbfc93b834b",
-    "group": "Bières d'Abbaye",
+    "group": "BiÃ¨res d'Abbaye",
     "groupSortOrder": 3,
     "name": "Maredsous 8 Brune",
     "price": 4.0,
@@ -1080,7 +1080,7 @@
   {
     "alcohol": 7.0,
     "detailsKey": "36c7f051-81bc-4b7c-ad46-21413f62bb3e",
-    "group": "Bières Trappistes",
+    "group": "BiÃ¨res Trappistes",
     "groupSortOrder": 2,
     "name": "Achel",
     "price": 4.5,
@@ -1091,7 +1091,7 @@
   {
     "alcohol": 7.0,
     "detailsKey": "bd949f25-7b0d-44e5-a47f-66b712d1004a",
-    "group": "Bières Trappistes",
+    "group": "BiÃ¨res Trappistes",
     "groupSortOrder": 2,
     "name": "Chimay Rouge",
     "price": 4.5,
@@ -1102,7 +1102,7 @@
   {
     "alcohol": 8.5,
     "detailsKey": "df015f82-481f-4382-b523-978859887d98",
-    "group": "Bières Speciales en Bouteille",
+    "group": "BiÃ¨res Speciales en Bouteille",
     "groupSortOrder": 4,
     "name": "Duvel",
     "price": 4.0,
@@ -1124,7 +1124,7 @@
   {
     "alcohol": 11.3,
     "detailsKey": "8ca5d922-8ac8-4f24-8fec-af4de0378745",
-    "group": "Bières Trappistes",
+    "group": "BiÃ¨res Trappistes",
     "groupSortOrder": 2,
     "name": "Rochefort 10",
     "price": 5.0,
@@ -1146,7 +1146,7 @@
   {
     "alcohol": 6.5,
     "detailsKey": "9e82d289-d204-4a57-8351-199bd6695510",
-    "group": "Bières d'Abbaye",
+    "group": "BiÃ¨res d'Abbaye",
     "groupSortOrder": 3,
     "name": "Saison Dupont",
     "price": 4.0,
