@@ -6,10 +6,10 @@
              mc:Ignorable="d"
              xmlns:vm="clr-namespace:Etude.ViewModels"
              xmlns:behaviors="clr-namespace:Etude.Behaviors"
-             x:Class="Etude.Views.Set01Example03"
-             Title="Grouped List">
+             x:Class="Etude.Views.Set01Example04"
+             Title="Expand / Collapse Grouped List">
     <ContentPage.BindingContext>
-        <vm:Set01Example03ViewModel/>
+        <vm:Set01Example04ViewModel />
     </ContentPage.BindingContext>
     <ListView ItemsSource="{Binding Model}"
               GroupDisplayBinding="{Binding Group}"

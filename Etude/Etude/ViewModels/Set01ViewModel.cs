@@ -45,13 +45,18 @@ namespace Etude.ViewModels
                     },
                     new Example
                     {
-                        Name = "Expand / Collapse Tapped Cell",
+                        Name = "Expand Tapped Cell",
                         Act = async () => { await nav.PushAsync(new Set01Example02()); }
                     },
                     new Example
                     {
                         Name = "Grouped List",
                         Act = async () => { await nav.PushAsync(new Set01Example03()); }
+                    },
+                    new Example
+                    {
+                        Name = "Expand / Collapse Grouped List",
+                        Act = async () => { await nav.PushAsync(new Set01Example04()); }
                     }
                 };
             });
