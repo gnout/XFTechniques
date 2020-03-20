@@ -7,6 +7,7 @@
              xmlns:vm="clr-namespace:Etude.ViewModels"
              xmlns:behaviors="clr-namespace:Etude.Behaviors"
              x:Class="Etude.Views.Set01Example04"
+             x:Name="ListPage"
              Title="Expand / Collapse Grouped List">
     <ContentPage.BindingContext>
         <vm:Set01Example04ViewModel />
@@ -22,11 +23,19 @@
         <ListView.GroupHeaderTemplate>
             <DataTemplate>
                 <ViewCell>
-                    <StackLayout Orientation="Horizontal" Padding="15,8,0,8" BackgroundColor="#FFE8D2">
-                        <Label Text="{Binding .[0].Group}"
-                               FontSize="22"
+                    <StackLayout Orientation="Horizontal" Padding="15,0,0,0" BackgroundColor="#FFE8D2">
+                        <Label Text="{Binding Key}"
+                               FontSize="18"
                                VerticalOptions="Center"
                                HorizontalOptions="StartAndExpand"/>
+                        <Button Image="{Binding StateIcon}"
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                BorderWidth="0"
+                                VerticalOptions="Center"
+                                HorizontalOptions="End"
+                                Command="{Binding Source={x:Reference ListPage}, Path=Content.BindingContext.ExpandCollapseCommand}"
+                                CommandParameter="{Binding .}"/>
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>
