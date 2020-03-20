@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:vm="clr-namespace:Etude.ViewModels"
+             xmlns:behaviors="clr-namespace:Etude.Behaviors"
+             x:Class="Etude.Views.Set01Example05"
+             x:Name="ListPage"
+             Title="ListView with Buttons">
+    <ContentPage.BindingContext>
+        <vm:Set01Example05ViewModel />
+    </ContentPage.BindingContext>
+    <ListView x:Name="listView" 
+              ItemsSource="{Binding Model}"
+              HasUnevenRows="True">
+        <ListView.Behaviors>
+            <behaviors:ListViewItemTappedBehavior/>
+        </ListView.Behaviors>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Frame HasShadow="True"
+                           CornerRadius="10"
+                           Margin="12,10,12,10">
+                        <Grid RowSpacing="0"
+                              ColumnSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40*"/>
+                                <ColumnDefinition Width="60*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Row="0" Grid.Column="0"
+                                   Source="Pencil"
+                                   WidthRequest="26"
+                                   HeightRequest="26"
+                                   HorizontalOptions="Start"
+                                   VerticalOptions="Center">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={x:Reference ListPage}, Path=BindingContext.EditItemCommand}" 
+                                                          CommandParameter="{Binding .}"
+                                                          NumberOfTapsRequired="1" />
+                                </Image.GestureRecognizers>
+                            </Image>
+
+                            <Image Grid.Row="0" Grid.Column="1"
+                                   Source="Bin"
+                                   WidthRequest="26"
+                                   HeightRequest="26"
+                                   HorizontalOptions="End"
+                                   VerticalOptions="Center">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={x:Reference ListPage}, Path=BindingContext.DeleteItemCommand}" 
+                                                          CommandParameter="{Binding .}"
+                                                          NumberOfTapsRequired="1" />
+                                </Image.GestureRecognizers>
+                            </Image>
+
+                            <!-- Band Name -->
+                            <Label Grid.Row="1" Grid.Column="0"
+                                   Grid.ColumnSpan="2"
+                                   Margin="0,2,0,0"
+                                   TextColor="#292929"
+                                   FontSize="24"
+                                   LineBreakMode="TailTruncation"
+                                   Text="{Binding Name}"/>
+
+                            <!-- Band Member 1 -->
+                            <Label Grid.Row="2" Grid.Column="0"
+                                   Margin="0,5,0,0"
+                                   Text="Group"/>
+                            <Label Grid.Row="2" Grid.Column="1"
+                                   Margin="0,5,0,0"
+                                   HorizontalTextAlignment="End"
+                                   LineBreakMode="TailTruncation"
+                                   Text="{Binding Group}"/>
+
+                            <!-- Band Member 2 -->
+                            <Label Grid.Row="3" Grid.Column="0"
+                                   Margin="0,5,0,0"
+                                   Text="Style"/>
+                            <Label Grid.Row="3" Grid.Column="1"
+                                   Margin="0,5,0,0"
+                                   HorizontalTextAlignment="End"
+                                   LineBreakMode="TailTruncation"
+                                   Text="{Binding Style}"/>
+
+                            <!-- Band Member 3 -->
+                            <Label Grid.Row="4" Grid.Column="0"
+                                   Margin="0,5,0,0"
+                                   Text="Alcohol"/>
+                            <Label Grid.Row="4" Grid.Column="1"
+                                   Margin="0,5,0,0"
+                                   HorizontalTextAlignment="End"
+                                   LineBreakMode="TailTruncation"
+                                   Text="{Binding Alcohol}"/>
+                        </Grid>
+                    </Frame>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

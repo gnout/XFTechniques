@@ -57,6 +57,11 @@ namespace Etude.ViewModels
                     {
                         Name = "Expand / Collapse Grouped List",
                         Act = async () => { await nav.PushAsync(new Set01Example04()); }
+                    },
+                    new Example
+                    {
+                        Name = "ListView with button",
+                        Act = async () => { await nav.PushAsync(new Set01Example05()); }
                     }
                 };
             });
