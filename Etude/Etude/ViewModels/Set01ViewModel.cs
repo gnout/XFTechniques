@@ -62,6 +62,11 @@ namespace Etude.ViewModels
                     {
                         Name = "ListView with button",
                         Act = async () => { await nav.PushAsync(new Set01Example05()); }
+                    },
+                    new Example
+                    {
+                        Name = "Thread Safe Observable",
+                        Act = async () => { await nav.PushAsync(new Set01Example06()); }
                     }
                 };
             });

@@ -28,6 +28,13 @@ Proportions can also ve used for other media like icons etc.
 | XXHDPI      | 960x1600px  |      is 3 x MDPI |
 | XXXHDPI     | 1280x1920px |      is 4 x MDPI |
 
+## Etudes
+
+### Set 01 (ListViews) - Example 06 (Thread Safe Observable Collection)
+
+The example shows how to make an `ObservableCollection` thread safe. The code is taken for the article [Making ObservableCollection Thread-Safe in Xamarin.Forms](https://codetraveler.io/2019/09/11/using-observablecollection-in-a-multi-threaded-xamarin-forms-application/)
+
+
 
 
 For Reactive UI
