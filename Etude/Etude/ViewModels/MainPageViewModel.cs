@@ -55,6 +55,11 @@ namespace Etude.ViewModels
                     {
                         Name = "Page Transition Animations",
                         Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set04()); }
+                    },
+                    new Example
+                    {
+                        Name = "Assorted",
+                        Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set05()); }
                     }
                 };
             });
