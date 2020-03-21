@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:vm="clr-namespace:Etude.ViewModels"
+             xmlns:behaviors="clr-namespace:Etude.Behaviors"
+             x:Class="Etude.Views.Set05Example02"
+             Title="Event to Command Behaviors">
+    <ContentPage.BindingContext>
+        <vm:Set05Example02ViewModel/>
+    </ContentPage.BindingContext>
+
+    <ListView ItemsSource="{Binding Model}">
+        <ListView.Behaviors>
+            <behaviors:ListViewItemTappedBehavior/>
+            <behaviors:EventToCommandBehavior EventName="ItemSelected" 
+                                              Command="{Binding SelectedItemCommand}" 
+                                              Converter="{StaticResource SelectedItemEventArgsConverter}"/>
+        </ListView.Behaviors>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Name}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

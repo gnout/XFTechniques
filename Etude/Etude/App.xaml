@@ -4,8 +4,14 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:converters="clr-namespace:Etude.Converters"
              x:Class="Etude.App">
     <Application.Resources>
+        <ResourceDictionary>
+            
+            <!-- Converters -->
+            <converters:SelectedItemEventArgsConverter x:Key="SelectedItemEventArgsConverter" />
 
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
