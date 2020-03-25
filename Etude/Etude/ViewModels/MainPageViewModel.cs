@@ -65,6 +65,11 @@ namespace Etude.ViewModels
                     {
                         Name = "Effects",
                         Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set06()); }
+                    },
+                    new Example
+                    {
+                        Name = "Converters",
+                        Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set07()); }
                     }
                 };
             });

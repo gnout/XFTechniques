@@ -38,6 +38,21 @@ The example shows how to make an `ObservableCollection` thread safe. The code is
 
 The code is taken for the article [Forms Effect to automatically scale FontSize on Label](https://msicc.net/xfeffects-forms-effect-to-automatically-scale-fontsize-on-label/)
 
+### Set 07 (Converters) - Example 01 (Binadble Converter Parameter)
+
+The example is take from the [Xamarin Forum](https://forums.xamarin.com/discussion/71810/pass-binding-to-converterparameter)
+
+
+For the converters
+https://stackoverflow.com/questions/4942501/using-enum-in-converterparameter
+https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/data-binding/converters#binding-converter-properties
+
+
+
+
+
+
+
 
 
 For Reactive UI
@@ -86,4 +101,38 @@ For Reactive UI
     }
 
 
+
+Check the following
+                                <Label x:Name="LabelSubscriptionType" 
+                                       Text="{Binding SubscriptionType}"
+                                       IsVisible="False"/>
+                                <Label Grid.Row="0"
+                                       Style="{StaticResource BlackLabelBold}"
+                                       FontSize="20">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{resources:Translate CreateInvoiceDiscountCodeAvailableCodes1}"/>
+                                            <Span Text=" " />
+                                            <Span Text="{Binding FreeDiscountCodesLeft, Converter={StaticResource NumberOfDiscountCodesToStringConverter}, ConverterParameter={x:Reference Name=LabelSubscriptionType}}" 
+                                                  FontSize="22" />
+                                            <Span Text=" " />
+                                            <Span Text="{resources:Translate CreateInvoiceDiscountCodeAvailableCodes2}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <Label Grid.Row="1"
+                                       Style="{StaticResource GrayLabel}">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{resources:Translate CreateInvoiceDiscountCodePlanInfo1}"/>
+                                            <Span Text=" " />
+                                            <Span Text="{Binding SubscriptionType, Converter={StaticResource SubscriptionTypesToStringConverter}}" 
+                                                  FontAttributes="Bold" 
+                                                  FontSize="20" />
+                                            <Span Text=" " />
+                                            <Span Text="{Binding MaxFreeDiscountCodeForPeriod, Converter={StaticResource NumberOfDiscountCodesToStringConverter}, ConverterParameter={x:Reference Name=LabelSubscriptionType}, StringFormat={resources:Translate CreateInvoiceDiscountCodePlanInfo2}}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
 
