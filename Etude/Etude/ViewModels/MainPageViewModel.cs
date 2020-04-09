@@ -70,6 +70,11 @@ namespace Etude.ViewModels
                     {
                         Name = "Converters",
                         Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set07()); }
+                    },
+                    new Example
+                    {
+                        Name = "Reactive UI",
+                        Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set08()); }
                     }
                 };
             });

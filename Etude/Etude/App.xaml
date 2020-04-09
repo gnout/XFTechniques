@@ -12,6 +12,9 @@
             <!-- Converters -->
             <converters:SelectedItemEventArgsConverter x:Key="SelectedItemEventArgsConverter" />
 
+            <!-- Colors -->
+            <Color x:Key="OverlayColor">#C9898980</Color>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
