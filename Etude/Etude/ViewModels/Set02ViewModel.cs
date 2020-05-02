@@ -47,6 +47,11 @@ namespace Etude.ViewModels
                     {
                         Name = "Equal Height to Width",
                         Act = async () => { await nav.PushAsync(new Set02Example02()); }
+                    },
+                    new Example
+                    {
+                        Name = "Grid Static Resources Definition",
+                        Act = async () => { await nav.PushAsync(new Set02Example03()); }
                     }
                 };
             });

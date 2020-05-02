@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Etude.Views.Set02Example03"
+             Title="Grid Static Resources Definition">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+                
+            <!-- Default Grid Style -->
+            <Style TargetType="Grid">
+                <Setter Property="RowSpacing" Value="0" />
+                <Setter Property="ColumnSpacing" Value="0" />
+            </Style>
+
+            <ColumnDefinitionCollection x:Key="ColumnDefinitionCollection">
+                <ColumnDefinition Width="24" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="24" />
+            </ColumnDefinitionCollection>
+            <RowDefinitionCollection x:Key="RowDefinitionCollection">
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="*" />
+            </RowDefinitionCollection>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid ColumnDefinitions="{StaticResource ColumnDefinitionCollection}"
+          RowDefinitions="{StaticResource RowDefinitionCollection}">
+        <BoxView Grid.Column="1" Grid.Row="1"
+                 BackgroundColor="Beige"/>
+        <Label Grid.Column="1" Grid.Row="2"
+               Text="Third Row"/>
+    </Grid>
+</ContentPage>
