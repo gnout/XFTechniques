@@ -42,6 +42,11 @@ namespace Etude.ViewModels
                     {
                         Name = "Random Strings and Passwords",
                         Act = async () => { await nav.PushAsync(new Set03Example01()); }
+                    },
+                    new Example
+                    {
+                        Name = "Compare Decimal with Zero",
+                        Act = async () => { await nav.PushAsync(new Set03Example02()); }
                     }
                 };
             });
