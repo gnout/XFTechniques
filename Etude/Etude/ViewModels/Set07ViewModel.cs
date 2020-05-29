@@ -47,6 +47,11 @@ namespace Etude.ViewModels
                     {
                         Name = "Enum Converter Parameter",
                         Act = async () => { await nav.PushAsync(new Set07Example02()); }
+                    },
+                    new Example
+                    {
+                        Name = "Simple Bound Converter",
+                        Act = async () => { await nav.PushAsync(new Set07Example03()); }
                     }
                 };
             });

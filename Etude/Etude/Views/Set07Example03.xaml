@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:vm="clr-namespace:Etude.ViewModels"
+             xmlns:converters="clr-namespace:Etude.Converters"
+             x:Class="Etude.Views.Set07Example03"
+             Title="Simple Bound Converter">
+    <ContentPage.BindingContext>
+        <vm:Set07Example03ViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:AlcoholToTypeConverter x:Key="AlcoholToTypeConverter"/>
+            <converters:AlcoholToTypeV2Converter x:Key="AlcoholToTypeV2Converter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0"
+               x:Name="Model1Label"
+               IsVisible="False"
+               Text="{Binding Model1.Name}"/>
+
+        <Label Grid.Row="0" 
+               Text="{Binding Model1.Alcohol, Converter={StaticResource AlcoholToTypeConverter}, ConverterParameter={x:Reference Model1Label}}"/>
+
+        <Label Grid.Row="1" 
+               x:Name="Model2Label"
+               Text="{Binding Model2.Alcohol, Converter={StaticResource AlcoholToTypeV2Converter}, ConverterParameter={x:Reference Model2Label}}"/>
+    </Grid>
+</ContentPage>
