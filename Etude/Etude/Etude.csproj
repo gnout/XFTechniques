@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="NodaMoney" Version="1.0.5" />
     <PackageReference Include="ReactiveUI" Version="13.1.1" />
     <PackageReference Include="ReactiveUI.Events.XamForms" Version="13.1.1" />
     <PackageReference Include="ReactiveUI.Fody" Version="13.1.1" />
@@ -120,6 +121,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Set07Example03.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Set07Example04.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Set08.xaml">

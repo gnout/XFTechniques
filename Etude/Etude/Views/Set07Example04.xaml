@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Etude.ViewModels"
+             xmlns:converters="clr-namespace:Etude.Converters"
+             x:Class="Etude.Views.Set07Example04"
+             Title="Currency Converter">
+    <ContentPage.BindingContext>
+        <vm:Set07Example04ViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:CurrencyFormatterConverter x:Key="CurrencyFormatterConverter"/>
+            <converters:FractionExtractionConverter x:Key="FractionExtractionConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout Margin="16">
+        <Label FontSize="Default">
+            <Label.Text>
+                <MultiBinding Converter="{StaticResource CurrencyFormatterConverter}">
+                    <Binding Path="Price"/>
+                    <Binding Path="CurrencyCode"/>
+                </MultiBinding>
+            </Label.Text>
+        </Label>
+        <Label FontSize="Default">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Currency: " />
+                    <Span TextColor="CornflowerBlue" 
+                          FontSize="18">
+                        <Span.Text>
+                            <MultiBinding Converter="{StaticResource CurrencyFormatterConverter}" ConverterParameter="C0">
+                                <Binding Path="Price"/>
+                                <Binding Path="CurrencyCode"/>
+                            </MultiBinding>
+                        </Span.Text>
+                    </Span>
+                    <Span Text='{Binding Price, Converter={StaticResource FractionExtractionConverter}, ConverterParameter="True"}'
+                          TextColor="Red"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+</ContentPage>

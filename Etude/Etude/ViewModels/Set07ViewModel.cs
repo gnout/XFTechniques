@@ -52,6 +52,11 @@ namespace Etude.ViewModels
                     {
                         Name = "Simple Bound Converter",
                         Act = async () => { await nav.PushAsync(new Set07Example03()); }
+                    },
+                    new Example
+                    {
+                        Name = "Currency Converter",
+                        Act = async () => { await nav.PushAsync(new Set07Example04()); }
                     }
                 };
             });

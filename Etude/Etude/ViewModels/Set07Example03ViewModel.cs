@@ -1,7 +1,4 @@
 ﻿using Etude.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Etude.ViewModels
 {
@@ -23,6 +20,5 @@ namespace Etude.ViewModels
         private Beer _model1 = new Beer { Name = "Rochefort 8", Alcohol = 9.2F };
         private Beer _model2 = new Beer { Name = "Leffe Blonde", Alcohol = 6.6F };
         #endregion
-
     }
 }
