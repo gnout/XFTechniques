@@ -4,7 +4,7 @@ using Android.Graphics;
 using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
-using AWImageButton = Android.Support.V7.Widget.AppCompatImageButton;
+using AWImageButton = AndroidX.AppCompat.Widget.AppCompatImageButton;
 
 [assembly: ExportEffect(typeof(Etude.Droid.Effects.ImageButtonTintEffect), nameof(Etude.Effects.ImageButtonTintEffect))]
 namespace Etude.Droid.Effects
