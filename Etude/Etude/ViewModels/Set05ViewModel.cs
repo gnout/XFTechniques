@@ -47,7 +47,12 @@ namespace Etude.ViewModels
                     {
                         Name = "Event to Command Behaviors",
                         Act = async () => { await nav.PushAsync(new Set05Example02()); }
-                    }
+                    },
+                    new Example
+                    {
+                        Name = "Labels",
+                        Act = async () => { await nav.PushAsync(new Set05Example03()); }
+                    },
                 };
             });
         }
