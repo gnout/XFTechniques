@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Etude.ViewModels"
+             xmlns:controls="clr-namespace:Etude.Controls"
+             x:Class="Etude.Views.Set01Example07"
+             Title="Sticky Header">
+    <ContentPage.BindingContext>
+        <vm:Set01Example07ViewModel/>
+    </ContentPage.BindingContext>
+    <Grid>
+        <controls:StickyHeaderCollectionView DisappearingContent="DisappearingContent"
+                                             StickyContent="StickyContent"
+                                             BackgroundColor="White"
+                                             Margin="0,44,0,0"
+                                             ItemSizingStrategy="MeasureFirstItem"
+                                             ItemsSource="{Binding Model}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="8"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="8"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="4"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="1"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Column="1" Grid.Row="1"
+                               FontSize="12"
+                               FontAttributes="Bold"
+                               Text="{Binding Name}"/>
+                        <Label Grid.Column="1" Grid.Row="2"
+                               FontAttributes="Italic"
+                               Text="{Binding Style}"/>
+                        <BoxView Grid.Column="0" Grid.Row="3"
+                                 Grid.ColumnSpan="3"
+                                 BackgroundColor="LightGray"
+                                 HeightRequest="1"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </controls:StickyHeaderCollectionView>
+
+        <StackLayout x:Name="DisappearingContent" 
+                     VerticalOptions="Start"
+                     BackgroundColor="White">
+            <BoxView HeightRequest="64"/>
+        </StackLayout>
+
+        <StackLayout x:Name="StickyContent" 
+                     VerticalOptions="Start"
+                     BackgroundColor="White">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="8"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="8"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="8"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="16"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Column="1" Grid.Row="1"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       Text="Beers"/>
+            </Grid>
+        </StackLayout>
+    </Grid>
+</ContentPage>

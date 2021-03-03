@@ -7,7 +7,7 @@
              xmlns:vm="clr-namespace:Etude.ViewModels"
              xmlns:behaviors="clr-namespace:Etude.Behaviors"
              x:Class="Etude.Views.Set01"
-             Title="List Views">
+             Title="List - Collections">
     <ContentPage.BindingContext>
         <vm:Set01ViewModel />
     </ContentPage.BindingContext>

@@ -67,6 +67,11 @@ namespace Etude.ViewModels
                     {
                         Name = "Thread Safe Observable",
                         Act = async () => { await nav.PushAsync(new Set01Example06()); }
+                    },
+                    new Example
+                    {
+                        Name = "Sticky Header",
+                        Act = async () => { await nav.PushAsync(new Set01Example07()); }
                     }
                 };
             });

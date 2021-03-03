@@ -38,7 +38,7 @@ namespace Etude.ViewModels
                 {
                     new Example
                     {
-                        Name = "List Views",
+                        Name = "List Views - Collection Views",
                         Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set01()); }
                     },
                     new Example
