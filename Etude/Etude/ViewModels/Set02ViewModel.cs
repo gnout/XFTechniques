@@ -40,14 +40,19 @@ namespace Etude.ViewModels
                 {
                     new Example
                     {
-                        Name = "ACR User Dialogs",
-                        Act = async () => { await nav.PushAsync(new Example02()); }
+                        Name = "Animate Dialog Appearance",
+                        Act = async () => { await nav.PushAsync(new Set02Example01()); }
                     },
                     new Example
                     {
-                        Name = "Fody",
-                        Act = async () => { await nav.PushAsync(new Example22()); }
+                        Name = "Equal Height to Width",
+                        Act = async () => { await nav.PushAsync(new Set02Example02()); }
                     },
+                    new Example
+                    {
+                        Name = "Grid Static Resources Definition",
+                        Act = async () => { await nav.PushAsync(new Set02Example03()); }
+                    }
                 };
             });
         }

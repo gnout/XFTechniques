@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:vm="clr-namespace:Etude.ViewModels"
+             x:Class="Etude.Views.Set08Example01"
+             Title="Basic ViewModel">
+    <ContentPage.BindingContext>
+        <vm:Set08Example01ViewModel/>
+    </ContentPage.BindingContext>
+    <AbsoluteLayout>
+        
+        <!-- MainView -->
+        <StackLayout AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
+                     AbsoluteLayout.LayoutFlags="All">
+            <Button Text="ICommand"
+                    Command="{Binding Sample01Command}"/>
+            <Button Text="ReactiveCommand"
+                    Command="{Binding Sample02Command}"/>
+            <Button Text="Delay 3 sec"
+                    Command="{Binding Sample03Command}"/>
+            <Button Text="Subscribe to result"
+                    Command="{Binding Sample04Command}"/>
+        </StackLayout>
+
+        <!-- Overlay -->
+        <ContentView AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
+                     AbsoluteLayout.LayoutFlags="All" 
+                     IsVisible="{Binding IsBusy}" 
+                     BackgroundColor="{StaticResource OverlayColor}">
+            <ActivityIndicator IsRunning="{Binding IsBusy}" 
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center" />
+        </ContentView>
+        
+    </AbsoluteLayout>
+</ContentPage>

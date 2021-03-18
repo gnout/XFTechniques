@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Etude.Views.Set05Example03"
+             Title="Labels">
+    <StackLayout>
+        <Label LineHeight="1.2"
+               FontSize="16">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="€ 0.00"/>
+                    <Span Text="&#x0a;"/>
+                    <Span Text="Line break on Formatted text"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label FontSize="12"
+               LineBreakMode="TailTruncation"
+               MaxLines="1">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Cool"/>
+                    <Span Text=" ∙ "/>
+                    <Span Text="Separator"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+</ContentPage>

@@ -40,19 +40,19 @@ namespace Etude.ViewModels
                 {
                     new Example
                     {
-                        Name = "Event to Command Behaviors",
-                        Act = async () => { await nav.PushAsync(new Example10()); }
-                    },
-                    new Example
-                    {
                         Name = "Font Awesome",
-                        Act = async () => { await nav.PushAsync(new Example13()); }
+                        Act = async () => { await nav.PushAsync(new Set05Example01()); }
                     },
                     new Example
                     {
-                        Name = "Compiled Bindings",
-                        Act = async () => { await nav.PushAsync(new Example21()); }
-                    }
+                        Name = "Event to Command Behaviors",
+                        Act = async () => { await nav.PushAsync(new Set05Example02()); }
+                    },
+                    new Example
+                    {
+                        Name = "Labels",
+                        Act = async () => { await nav.PushAsync(new Set05Example03()); }
+                    },
                 };
             });
         }

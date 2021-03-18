@@ -1,169 +1,51 @@
-﻿using Etude.Models;
+﻿using Etude.Helpers;
+using Etude.Models;
 using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Net.Http;
-using System.Threading.Tasks;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 
 namespace Etude.Services
 {
     public class DataService
     {
-        public List<Food> GetFoods()
-        {
-            return new List<Food>
-            {
-                new Food { Name = "Pasta", Description = "Carb Snakes" },
-                new Food { Name = "Potato", Description = "The King of all Carbs" },
-                new Food { Name = "Bread", Description = "Soft & Gentle" },
-                new Food { Name = "Rice", Description = "Tiny grains of goodness" },
-                new Food { Name = "Apple", Description = "Keep the Doctor away" },
-                new Food { Name = "Banana", Description = "This fruit is appealing" },
-                new Food { Name = "Pear", Description = "Pear with me" },
-                new Food { Name = "Carrot", Description = "Sounds like parrot" },
-                new Food { Name = "Green Bean", Description = "The less popular cousin of the baked bean" },
-                new Food { Name = "Broccoli", Description = "Tiny food trees" },
-                new Food { Name = "Peas", Description = "Peas sir, can I have some more?" },
-                new Food { Name = "Milk", Description = "Milk" },
-                new Food { Name = "Cheese", Description = "Cheese + Potato" },
-                new Food { Name = "Ice Cream", Description = "Because I couldn't find an icon for yoghurt" }
-            };
-        }
+        private const string BeersFileName = "Etude.beers.json";
 
-        public ObservableCollection<FoodGroup> GetFoodGroups()
+        private static List<Beer> _beers;
+
+        public List<Beer> GetBeers()
         {
-            return new ObservableCollection<FoodGroup>
+            try
             {
-                new FoodGroup("Carbohydrates")
+                var assembly = IntrospectionExtensions.GetTypeInfo(typeof(DataService)).Assembly;
+                var stream = assembly.GetManifestResourceStream(BeersFileName);
+
+                if (stream == null)
                 {
-                    new Food { Name = "pasta", Description = "Carb Snakes" },
-                    new Food { Name = "potato", Description = "The King of all Carbs" },
-                    new Food { Name = "bread", Description = "Soft & Gentle" },
-                    new Food { Name = "rice", Description = "Tiny grains of goodness" },
-                },
-                new FoodGroup("Fruits")
-                {
-                    new Food { Name = "apple", Description = "Keep the Doctor away" },
-                    new Food { Name = "banana", Description = "This fruit is appealing" },
-                    new Food { Name = "pear", Description = "Pear with me" },
-                },
-                new FoodGroup("Vegetables")
-                {
-                    new Food { Name = "carrot", Description = "Sounds like parrot" },
-                    new Food { Name = "green bean", Description = "The less popular cousin of the baked bean" },
-                    new Food { Name = "broccoli", Description = "Tiny food trees" },
-                    new Food { Name = "peas", Description = "Peas sir, can I have some more?" },
-                },
-                new FoodGroup("Dairy")
-                {
-                    new Food { Name = "Milk", Description = "Milk" },
-                    new Food { Name = "Cheese", Description = "Cheese + Potato" },
-                    new Food { Name = "Ice Cream", Description = "Because I couldn't find an icon for yoghurt" }
+                    return _beers;
                 }
-            };
-        }
 
-        public ObservableCollection<Band> GetBands()
-        {
-            return new ObservableCollection<Band>
-            {
-                new Band
+                using (var reader = new StreamReader(stream))
                 {
-                    Name = "Black Sabbath",
-                    Musicians = new List<string>
-                    {
-                        "Ozzy Osbourne",
-                        "Tommy Iommy",
-                        "Geezer Butler",
-                        "Bill Ward"
-                    }
-                },
-                new Band
-                {
-                    Name = "Pink Floyd",
-                    Musicians = new List<string>
-                    {
-                        "Roger Waters",
-                        "David Gilmour",
-                        "Richard Wright",
-                        "Nick Mason"
-                    }
-                },
-                new Band
-                {
-                    Name = "Led Zeppelin",
-                    Musicians = new List<string>
-                    {
-                        "Robert Plant",
-                        "Jimmy Page",
-                        "John Paul Jones",
-                        "John Bonham"
-                    }
-                },
-                new Band
-                {
-                    Name = "Deep Purple",
-                    Musicians = new List<string>
-                    {
-                        "Ian Gillan",
-                        "Ritchie Blackmore",
-                        "Jon Lord",
-                        "Roger Glover",
-                        "Ian Paice"
-                    }
-                },
-                new Band
-                {
-                    Name = "Rainbow",
-                    Musicians = new List<string>
-                    {
-                        "Ronnie James Dio",
-                        "Ritchie Blackmore",
-                        "Jimmy Bain",
-                        "Tony carey",
-                        "Cozy Powell"
-                    }
-                }
-            };
-        }
-
-        public async Task<List<Employee>> GetApiDataAsync()
-        {
-            var result = new List<Employee>();
-            string url = "http://dummy.restapiexample.com/api/v1/employees";
-
-            using (var client = new HttpClient())
-            {
-                var response = await client.GetAsync(new Uri(url));
-
-                if (response.IsSuccessStatusCode)
-                {
-                    var content = await response.Content.ReadAsStringAsync();
-                    result = JsonConvert.DeserializeObject<List<Employee>>(content);
+                    var json = reader.ReadToEnd();
+                    _beers = JsonConvert.DeserializeObject<List<Beer>>(json);
                 }
             }
+            catch { }
 
-            return result;
+            return _beers;
         }
 
-        public async Task<RecipePuppyResponse> GetApiRecipePuppyAsync()
+        public ObservableCollection<Grouping<string, Beer>> GroupBeerList(IEnumerable<Beer> beers)
         {
-            var result = new RecipePuppyResponse();
-            string url = "http://www.recipepuppy.com/api/?i=onions,garlic&q=pasta&p=3";
+            var sortedBeers = beers
+                .OrderBy(a => a.Name)
+                .GroupBy(b => b.Group)
+                .Select(c => new Grouping<string, Beer>(c.Key, c));
 
-            using (var client = new HttpClient())
-            {
-                var response = await client.GetAsync(new Uri(url));
-
-                if (response.IsSuccessStatusCode)
-                {
-                    var content = await response.Content.ReadAsStringAsync();
-                    result = JsonConvert.DeserializeObject<RecipePuppyResponse>(content);
-                }
-            }
-
-            return result;
+            return new ObservableCollection<Grouping<string, Beer>>(sortedBeers);
         }
     }
 }

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:vm="clr-namespace:Etude.ViewModels"
+             x:Class="Etude.Views.Set03Example02"
+             Title="Compare Decimal with Zero">
+    <ContentPage.BindingContext>
+        <vm:Set03Example02ViewModel/>
+    </ContentPage.BindingContext>
+    <Grid ColumnSpacing="0"
+          RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ScrollView Grid.Row="0">
+            <StackLayout Spacing="0">
+                <Button Text="Compare 0 to 0"
+                        Command="{Binding Compare01Command}"/>
+                <Button Text="Compare 0.0 to 0"
+                        Command="{Binding Compare02Command}"/>
+                <Button Text="Compare 0.01 to 0"
+                        Command="{Binding Compare03Command}"/>
+                <Button Text="Compare 0.0000000 to 0 (Limit)"
+                        Command="{Binding Compare04Command}"/>
+            </StackLayout>
+        </ScrollView>
+        <Frame Grid.Row="1"
+               Margin="20">
+            <StackLayout Spacing="0">
+                <Label Text="{Binding Result}"
+                       FontSize="Large"/>
+            </StackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>

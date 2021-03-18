@@ -40,28 +40,13 @@ namespace Etude.ViewModels
                 {
                     new Example
                     {
-                        Name = "Expand / Collapse Tapped Cell",
-                        Act = async () => { await nav.PushAsync(new Example03()); }
+                        Name = "Random Strings and Passwords",
+                        Act = async () => { await nav.PushAsync(new Set03Example01()); }
                     },
                     new Example
                     {
-                        Name = "Expand / Collapse Grouped List",
-                        Act = async () => { await nav.PushAsync(new Example04()); }
-                    },
-                    new Example
-                    {
-                        Name = "Simple Embeded Data",
-                        Act = async () => { await nav.PushAsync(new Example11()); }
-                    },
-                    new Example
-                    {
-                        Name = "Simple ListView API Data",
-                        Act = async () => { await nav.PushAsync(new Example12()); }
-                    },
-                    new Example
-                    {
-                        Name = "ListView with button",
-                        Act = async () => { await nav.PushAsync(new Example14()); }
+                        Name = "Compare Decimal with Zero",
+                        Act = async () => { await nav.PushAsync(new Set03Example02()); }
                     }
                 };
             });

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            mc:Ignorable="d"
+            xmlns:support="clr-namespace:Etude.Support"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            BarBackgroundColor="{x:OnPlatform Android=White}"
+            x:Class="Etude.Views.Set05Example01"
+            Title="Font Awesome">
+    <TabbedPage.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="FontAwesome"
+                        x:TypeArguments="x:String"
+                        Android="fa-solid-900.ttf#Font Awesome 5 Free"
+                        iOS="Font Awesome 5 Free" />
+        </ResourceDictionary>
+    </TabbedPage.Resources>
+    <ContentPage Title="Home">
+        <ContentPage.IconImageSource>
+            <FontImageSource Glyph="{x:Static support:IconFont.Home}"
+                             FontFamily="{StaticResource FontAwesome}"
+                             Size="18" />
+        </ContentPage.IconImageSource>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="54"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ImageButton Grid.Row="0"
+                         Padding="12">
+                <ImageButton.Source>
+                    <FontImageSource Glyph="{x:Static support:IconFont.Atom}"
+                                     FontFamily="{StaticResource FontAwesome}"
+                                     Color="#E86710"/>
+                </ImageButton.Source>
+            </ImageButton>
+            <Image Grid.Row="1">
+                <Image.Source>
+                    <FontImageSource Glyph="{x:Static support:IconFont.Award}"
+                                     FontFamily="{StaticResource FontAwesome}"
+                                     Color="#E86710"
+                                     Size="18" />
+                </Image.Source>
+            </Image>
+        </Grid>
+    </ContentPage>
+    <ContentPage Title="Search">
+        <ContentPage.IconImageSource>
+            <FontImageSource Glyph="{x:Static support:IconFont.Search}"
+                             FontFamily="{StaticResource FontAwesome}"
+                             Size="18" />
+        </ContentPage.IconImageSource>
+    </ContentPage>
+    <ContentPage Title="Profile">
+        <ContentPage.IconImageSource>
+            <FontImageSource Glyph="{x:Static support:IconFont.User}"
+                             FontFamily="{StaticResource FontAwesome}"
+                             Size="18" />
+        </ContentPage.IconImageSource>
+    </ContentPage>
+</TabbedPage>

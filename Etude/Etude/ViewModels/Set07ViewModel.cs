@@ -40,8 +40,23 @@ namespace Etude.ViewModels
                 {
                     new Example
                     {
-                        Name = "Random Strings and Passwords",
-                        Act = async () => { await nav.PushAsync(new Example18()); }
+                        Name = "Bindable Converter Parameter",
+                        Act = async () => { await nav.PushAsync(new Set07Example01()); }
+                    },
+                    new Example
+                    {
+                        Name = "Enum Converter Parameter",
+                        Act = async () => { await nav.PushAsync(new Set07Example02()); }
+                    },
+                    new Example
+                    {
+                        Name = "Simple Bound Converter",
+                        Act = async () => { await nav.PushAsync(new Set07Example03()); }
+                    },
+                    new Example
+                    {
+                        Name = "Currency Converter",
+                        Act = async () => { await nav.PushAsync(new Set07Example04()); }
                     }
                 };
             });

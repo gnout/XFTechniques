@@ -1,10 +1,8 @@
 ﻿using Etude.ViewModels;
-using System.ComponentModel;
 using Xamarin.Forms;
 
 namespace Etude.Views
 {
-    [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
         public MainPage()

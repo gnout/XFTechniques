@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:vm="clr-namespace:Etude.ViewModels"
+             xmlns:converters="clr-namespace:Etude.Converters"
+             x:Class="Etude.Views.Set07Example02"
+             Title="Enum Converter Parameter">
+    <ContentPage.BindingContext>
+        <vm:Set07Example02ViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:CharCounterConverter x:Key="CharCounterConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0"
+               Text="{Binding Title, StringFormat='Original: {0}'}"
+               FontSize="Large"
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand" />
+        <Label Grid.Row="1" 
+               Text="{Binding Title, StringFormat='All: {0}', Converter={StaticResource CharCounterConverter}, ConverterParameter={x:Static converters:CharCaps.All}}"
+               FontSize="Large"
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand" />
+        <Label Grid.Row="2" 
+               Text="{Binding Title, StringFormat='Only Lowercase: {0}', Converter={StaticResource CharCounterConverter}, ConverterParameter={x:Static converters:CharCaps.OnlyLowercase}}"
+               FontSize="Large"
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand" />
+        <Label Grid.Row="3" 
+               Text="{Binding Title, StringFormat='Only Uppercase: {0}', Converter={StaticResource CharCounterConverter}, ConverterParameter={x:Static converters:CharCaps.OnlyUppercase}}"
+               FontSize="Large"
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand" />
+    </Grid>
+</ContentPage>

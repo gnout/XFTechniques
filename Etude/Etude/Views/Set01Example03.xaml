@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:vm="clr-namespace:Etude.ViewModels"
+             xmlns:behaviors="clr-namespace:Etude.Behaviors"
+             x:Class="Etude.Views.Set01Example03"
+             Title="Grouped List">
+    <ContentPage.BindingContext>
+        <vm:Set01Example03ViewModel/>
+    </ContentPage.BindingContext>
+    <ListView ItemsSource="{Binding Model}"
+              GroupDisplayBinding="{Binding Group}"
+              HasUnevenRows="True"
+              GroupShortNameBinding="{Binding Group}"
+              IsGroupingEnabled="true">
+        <ListView.Behaviors>
+            <behaviors:ListViewItemTappedBehavior/>
+        </ListView.Behaviors>
+        <ListView.GroupHeaderTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="15,8,0,8" BackgroundColor="#FFE8D2">
+                        <Label Text="{Binding .[0].Group}"
+                               FontSize="22"
+                               VerticalOptions="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.GroupHeaderTemplate>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Name}" Detail="{Binding Style}"/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:vm="clr-namespace:Etude.ViewModels"
+             xmlns:converters="clr-namespace:Etude.Converters"
+             x:Class="Etude.Views.Set07Example01"
+             Title="Bindable Converter Parameter"
+             x:Name="Example01Page">
+    <ContentPage.BindingContext>
+        <vm:Set07Example01ViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:DivisionConverter x:Key="DivisionConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>    
+    <StackLayout>
+        <Label FontSize="Large"
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand">
+            <Label.Text>
+                <Binding Path="Model.Alcohol" StringFormat="Converter: {0:2}">
+                    <Binding.Converter>
+                        <converters:DivisionConverter Denominator="{Binding BindingContext.Model.Price, Source={x:Reference Example01Page}}"/>
+                    </Binding.Converter>
+                </Binding>
+            </Label.Text>
+        </Label>
+    </StackLayout>
+</ContentPage>

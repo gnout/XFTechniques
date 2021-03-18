@@ -40,13 +40,38 @@ namespace Etude.ViewModels
                 {
                     new Example
                     {
-                        Name = "Custom Control Behaviors",
-                        Act = async () => { await nav.PushAsync(new Example01()); }
+                        Name = "Android Fast Scrolling",
+                        Act = async () => { await nav.PushAsync(new Set01Example01()); }
                     },
                     new Example
                     {
-                        Name = "Markdown Control",
-                        Act = async () => { await nav.PushAsync(new Example20()); }
+                        Name = "Expand Tapped Cell",
+                        Act = async () => { await nav.PushAsync(new Set01Example02()); }
+                    },
+                    new Example
+                    {
+                        Name = "Grouped List",
+                        Act = async () => { await nav.PushAsync(new Set01Example03()); }
+                    },
+                    new Example
+                    {
+                        Name = "Expand / Collapse Grouped List",
+                        Act = async () => { await nav.PushAsync(new Set01Example04()); }
+                    },
+                    new Example
+                    {
+                        Name = "ListView with button",
+                        Act = async () => { await nav.PushAsync(new Set01Example05()); }
+                    },
+                    new Example
+                    {
+                        Name = "Thread Safe Observable",
+                        Act = async () => { await nav.PushAsync(new Set01Example06()); }
+                    },
+                    new Example
+                    {
+                        Name = "Sticky Header",
+                        Act = async () => { await nav.PushAsync(new Set01Example07()); }
                     }
                 };
             });

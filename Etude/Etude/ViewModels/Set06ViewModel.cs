@@ -40,14 +40,9 @@ namespace Etude.ViewModels
                 {
                     new Example
                     {
-                        Name = "Simple Collection View",
-                        Act = async () => { await nav.PushAsync(new Example16()); }
-                    },
-                    new Example
-                    {
-                        Name = "Template API Data",
-                        Act = async () => { await nav.PushAsync(new Example17()); }
-                    },
+                        Name = "Auto Scale FontSize",
+                        Act = async () => { await nav.PushAsync(new Set06Example01()); }
+                    }
                 };
             });
         }

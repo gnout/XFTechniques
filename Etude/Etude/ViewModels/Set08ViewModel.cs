@@ -40,13 +40,8 @@ namespace Etude.ViewModels
                 {
                     new Example
                     {
-                        Name = "Animate Dialog Appearance",
-                        Act = async () => { await nav.PushAsync(new Example15()); }
-                    },
-                    new Example
-                    {
-                        Name = "Equal Height to Width",
-                        Act = async () => { await nav.PushAsync(new Example19()); }
+                        Name = "Basic ViewModel",
+                        Act = async () => { await nav.PushAsync(new Set08Example01()); }
                     }
                 };
             });

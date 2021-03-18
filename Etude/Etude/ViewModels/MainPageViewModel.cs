@@ -38,23 +38,18 @@ namespace Etude.ViewModels
                 {
                     new Example
                     {
-                        Name = "Custom Controls",
+                        Name = "List Views - Collection Views",
                         Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set01()); }
                     },
                     new Example
                     {
-                        Name = "Various NuGet Packages",
+                        Name = "Interesting UI",
                         Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set02()); }
                     },
                     new Example
                     {
-                        Name = "List Views",
+                        Name = "Not so Xamarin",
                         Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set03()); }
-                    },
-                    new Example
-                    {
-                        Name = "Collection Views",
-                        Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set06()); }
                     },
                     new Example
                     {
@@ -68,12 +63,17 @@ namespace Etude.ViewModels
                     },
                     new Example
                     {
-                        Name = "Not so Xamarin",
+                        Name = "Effects",
+                        Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set06()); }
+                    },
+                    new Example
+                    {
+                        Name = "Converters",
                         Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set07()); }
                     },
                     new Example
                     {
-                        Name = "Interesting UI",
+                        Name = "Reactive UI",
                         Act = async () => { await App.Current.MainPage.Navigation.PushAsync(new Set08()); }
                     }
                 };

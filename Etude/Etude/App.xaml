@@ -3,16 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:converters="clr-namespace:Etude.Converters"
              mc:Ignorable="d"
+             xmlns:converters="clr-namespace:Etude.Converters"
              x:Class="Etude.App">
     <Application.Resources>
-        
-        <!-- Converters -->
-        <converters:SelectedItemEventArgsConverter x:Key="SelectedItemEventArgsConverter" />
+        <ResourceDictionary>
+            
+            <!-- Converters -->
+            <converters:SelectedItemEventArgsConverter x:Key="SelectedItemEventArgsConverter" />
 
-        <!-- Colors -->
-        <Color x:Key="OverlayColor">#C9898980</Color>
+            <!-- Colors -->
+            <Color x:Key="OverlayColor">#C9898980</Color>
 
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
