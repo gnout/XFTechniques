@@ -2,7 +2,8 @@
 Techniques for Xamarin.Forms
 
 ## Articles
-[Easy full screen Splash for Android](https://xamarininsider.com/2019/04/03/easy-full-screen-splash-for-android/?utm_campaign=Weekly%2BXamarin&utm_medium=email&utm_source=Weekly_Xamarin_201)
+
+* [Easy full screen Splash for Android](https://xamarininsider.com/2019/04/03/easy-full-screen-splash-for-android/?utm_campaign=Weekly%2BXamarin&utm_medium=email&utm_source=Weekly_Xamarin_201)
 
 ## Android image sizes (screen resolutions
 
@@ -20,18 +21,30 @@ Proportions can also ve used for other media like icons etc.
 
 ## Etudes
 
-### Set 01 (ListViews) - Example 06 (Thread Safe Observable Collection)
+### Set 01 - ListViews
+
+#### Example 06 - Thread Safe Observable Collection
 
 The example shows how to make an `ObservableCollection` thread safe. The code is taken for the article [Making ObservableCollection Thread-Safe in Xamarin.Forms](https://codetraveler.io/2019/09/11/using-observablecollection-in-a-multi-threaded-xamarin-forms-application/)
 
-### Set 01 (CollectionViews) - Example 07 (Sticky Header)
+#### Example 07 - Sticky Header
 
 Sticky header for a `CollectionView`. Some calculations are needed for this to work. The `TopMargin` of the `CollectionView` needs to be equal with the `StickyHeader` content. This example is based on the [article](https://luismts.com/stickyheader-xamarin-forms/) and the following [repository](https://github.com/luismts/CollectionViewInScrollView)
 
-### Set 06 (Effects) - Example 01 (Auto Scale Font)
+### Set 03 - Not so Xamarin
+
+#### Example 03 - Async in constructor
+
+Technique to call an async method in the constructor of the ViewModel. This technique is taken from [here](https://www.youtube.com/watch?v=O1Tx-k4Vao0)
+
+### Set 06 Effects
+
+#### Example 01 - Auto Scale Font
 
 The code is taken for the article [Forms Effect to automatically scale FontSize on Label](https://msicc.net/xfeffects-forms-effect-to-automatically-scale-fontsize-on-label/)
 
-### Set 07 (Converters) - Example 01 (Binadble Converter Parameter)
+### Set 07 Converters
+
+#### Example 01 - Binadble Converter Parameter
 
 The example is take from the [Xamarin Forum](https://forums.xamarin.com/discussion/71810/pass-binding-to-converterparameter)

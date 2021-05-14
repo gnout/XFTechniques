@@ -47,6 +47,11 @@ namespace Etude.ViewModels
                     {
                         Name = "Compare Decimal with Zero",
                         Act = async () => { await nav.PushAsync(new Set03Example02()); }
+                    },
+                    new Example
+                    {
+                        Name = "Task in Constructor",
+                        Act = async () => { await nav.PushAsync(new Set03Example03()); }
                     }
                 };
             });
